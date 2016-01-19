@@ -1,0 +1,635 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011/MacPorts 2011_5) (format=pdflatex 2012.1.10)  19 JAN 2016 16:02
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**spatialImplicature.tex
+(./spatialImplicature.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, cz
+ech, slovak, dutch, ukenglish, usenglishmax, basque, french, german-x-2009-06-1
+9, ngerman-x-2009-06-19, german, ngerman, swissgerman, italian, polish, portugu
+ese, spanish, catalan, galician, loaded.
+(/opt/local/share/texmf-texlive-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./cogsci.sty
+Conference Style for COGSCI -- last modified October 24, 2006
+) (/opt/local/share/texmf-texlive-dist/tex/latex/pslatex/pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+)
+(./apacite.sty
+Package: apacite 2012/02/25 v6.01 APA citation
+\c@BibCnt=\count87
+\bibleftmargin=\skip43
+\bibindent=\skip44
+\bibparsep=\skip45
+\bibitemsep=\skip46
+\biblabelsep=\skip47
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks17
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks18
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks19
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/mh/breqn.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/expl3.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3names.sty
+Package: l3names 2011/01/08 v2122 L3 Experimental Naming Scheme for TeX Primiti
+ves
+)
+Package: expl3 2011/04/09 v2222 L3 Experimental code bundle wrapper
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count101
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3basics.sty
+Package: l3basics 2011/04/23 v2246 L3 Experimental basic definitions
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3expan.sty
+Package: l3expan 2011/04/09 v2223 L3 Experimental Argument Expansion module
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3tl.sty
+Package: l3tl 2011/04/09 v2223 L3 Experimental Token Lists
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3int.sty
+Package: l3int 2011/04/11 v2229 L3 Experimental Integer module
+\l_tmpa_int=\count102
+\l_tmpb_int=\count103
+\l_tmpc_int=\count104
+\g_tmpa_int=\count105
+\g_tmpb_int=\count106
+\c_max_int=\count107
+\g_tl_inline_level_int=\count108
+\g_prg_inline_level_int=\count109
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3quark.sty
+Package: l3quark 2011/04/14 v2234 L3 Experimental Quark Commands
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3seq.sty
+Package: l3seq 2011/04/21 v2245 The LaTeX3 kernel: sequences and stacks
+\g_seq_nesting_depth_int=\count110
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3toks.sty
+Package: l3toks 2011/04/09 v2223 L3 Experimental Token Registers
+\l_tmpb_toks=\toks21
+\l_tmpc_toks=\toks22
+\g_tmpa_toks=\toks23
+\g_tmpb_toks=\toks24
+\g_tmpc_toks=\toks25
+\c_empty_toks=\toks26
+\l_tl_replace_toks=\toks27
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3prg.sty
+Package: l3prg 2011/04/09 v2223 L3 Experimental control structures
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3clist.sty
+Package: l3clist 2011/04/09 v2223 L3 Experimental comma separated lists
+\g_clist_map_inline_int=\count111
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3token.sty
+Package: l3token 2011/04/09 v2223 L3 Experimental token investigation and manip
+ulation
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3prop.sty
+Package: l3prop 2011/04/09 v2223 L3 Experimental Property Lists
+\g_prop_inline_level_int=\count112
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3msg.sty
+Package: l3msg 2010/10/02 v2052 L3 Experimental LaTeX Messages module
+\l_msg_redirect_classes_prop=\toks28
+\l_msg_redirect_names_prop=\toks29
+\l_msg_redirect_fatal_prop=\toks30
+\l_msg_redirect_error_prop=\toks31
+\l_msg_redirect_warning_prop=\toks32
+\l_msg_redirect_info_prop=\toks33
+\l_msg_redirect_log_prop=\toks34
+\l_msg_redirect_trace_prop=\toks35
+\l_msg_redirect_none_prop=\toks36
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3io.sty
+Package: l3io 2010/10/03 v2063 L3 Experimental i/o module
+\g_iow_streams_prop=\toks37
+\g_ior_streams_prop=\toks38
+\l_iow_stream_int=\count113
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3skip.sty
+Package: l3skip 2011/02/15 v2149 L3 Experimental skip registers
+\l_tmpa_skip=\skip51
+\l_tmpb_skip=\skip52
+\l_tmpc_skip=\skip53
+\g_tmpa_skip=\skip54
+\g_tmpb_skip=\skip55
+\l_tmpa_dim=\dimen114
+\l_tmpb_dim=\dimen115
+\l_tmpc_dim=\dimen116
+\l_tmpd_dim=\dimen117
+\g_tmpa_dim=\dimen118
+\g_tmpb_dim=\dimen119
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3box.sty
+Package: l3box 2011/04/09 v2223 L3 Experimental Box module
+\l_tmpb_box=\box28
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3keyval.sty
+Package: l3keyval 2011/04/09 v2223 L3 Experimental keyval processing
+\l_KV_level_int=\count114
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3keys.sty
+Package: l3keys 2010/11/11 v2082 L3 Experimental key-value support
+\l_keys_choice_int=\count115
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3precom.sty
+Package: l3precom 2011/04/09 v2223 L3 Experimental precompilation module
+\g_gen_sym_int=\count116
+\g_ggen_sym_int=\count117
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3xref.sty
+Package: l3xref 2011/04/09 v2223 L3 Experimental cross referencing
+\g_xref_all_curr_immediate_fields_prop=\toks39
+\g_xref_all_curr_deferred_fields_prop=\toks40
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3file.sty
+Package: l3file 2011/04/21 v2242 The LaTeX3 kernel: file operations
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3fp.sty
+Package: l3fp 2011/03/19 v2201 L3 Experimental floating-point operations
+\c_one_million=\count118
+\c_one_hundred_million=\count119
+\c_five_hundred_million=\count120
+\c_one_thousand_million=\count121
+\c_fp_pi_by_four_decimal_int=\count122
+\c_fp_pi_by_four_extended_int=\count123
+\c_fp_pi_decimal_int=\count124
+\c_fp_pi_extended_int=\count125
+\c_fp_two_pi_decimal_int=\count126
+\c_fp_two_pi_extended_int=\count127
+\l_fp_count_int=\count128
+\l_fp_div_offset_int=\count129
+\l_fp_exp_integer_int=\count130
+\l_fp_exp_decimal_int=\count131
+\l_fp_exp_extended_int=\count132
+\l_fp_exp_exponent_int=\count133
+\l_fp_input_a_sign_int=\count134
+\l_fp_input_a_integer_int=\count135
+\l_fp_input_a_decimal_int=\count136
+\l_fp_input_a_exponent_int=\count137
+\l_fp_input_b_sign_int=\count138
+\l_fp_input_b_integer_int=\count139
+\l_fp_input_b_decimal_int=\count140
+\l_fp_input_b_exponent_int=\count141
+\l_fp_input_a_extended_int=\count142
+\l_fp_input_b_extended_int=\count143
+\l_fp_mul_a_i_int=\count144
+\l_fp_mul_a_ii_int=\count145
+\l_fp_mul_a_iii_int=\count146
+\l_fp_mul_a_iv_int=\count147
+\l_fp_mul_a_v_int=\count148
+\l_fp_mul_a_vi_int=\count149
+\l_fp_mul_b_i_int=\count150
+\l_fp_mul_b_ii_int=\count151
+\l_fp_mul_b_iii_int=\count152
+\l_fp_mul_b_iv_int=\count153
+\l_fp_mul_b_v_int=\count154
+\l_fp_mul_b_vi_int=\count155
+\l_fp_mul_output_int=\count156
+\l_fp_output_sign_int=\count157
+\l_fp_output_integer_int=\count158
+\l_fp_output_decimal_int=\count159
+\l_fp_output_exponent_int=\count160
+\l_fp_output_extended_int=\count161
+\l_fp_round_position_int=\count162
+\l_fp_round_target_int=\count163
+\l_fp_split_sign_int=\count164
+\l_fp_tmp_int=\count165
+\l_fp_trig_octant_int=\count166
+\l_fp_trig_sign_int=\count167
+\l_fp_trig_decimal_int=\count168
+\l_fp_trig_extended_int=\count169
+\l_fp_tmp_dim=\dimen120
+\l_fp_tmp_skip=\skip56
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/expl3/l3luatex.sty
+Package: l3luatex 2010/07/18 v1985 L3 Experimental LuaTeX functions
+\g_cctab_allocate_int=\count170
+\g_cctab_stack_int=\count171
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count172
+\calc@Bcount=\count173
+\calc@Adimen=\dimen121
+\calc@Bdimen=\dimen122
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count174
+\calc@Cskip=\skip59
+))
+Package: breqn 2009/08/07 v0.98a Breaking equations
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/mh/flexisym.sty
+Package: flexisym 2010/09/17 v0.97b Make math characters macros
+LaTeX Info: Redefining \textprime on input line 296.
+LaTeX Info: Redefining \not on input line 354.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/mh/cmbase.sym
+File: cmbase.sym 2007/12/19 v0.92
+LaTeX Info: Redefining \hbar on input line 323.
+LaTeX Info: Redefining \surd on input line 325.
+LaTeX Info: Redefining \angle on input line 333.
+LaTeX Info: Redefining \neq on input line 334.
+LaTeX Info: Redefining \mapsto on input line 335.
+LaTeX Info: Redefining \cong on input line 336.
+LaTeX Info: Redefining \notin on input line 339.
+LaTeX Info: Redefining \rightleftharpoons on input line 340.
+LaTeX Info: Redefining \doteq on input line 341.
+LaTeX Info: Redefining \hookrightarrow on input line 342.
+LaTeX Info: Redefining \hookleftarrow on input line 343.
+LaTeX Info: Redefining \bowtie on input line 344.
+LaTeX Info: Redefining \models on input line 345.
+LaTeX Info: Redefining \Longrightarrow on input line 346.
+LaTeX Info: Redefining \longrightarrow on input line 347.
+LaTeX Info: Redefining \Longleftarrow on input line 348.
+LaTeX Info: Redefining \longleftarrow on input line 349.
+LaTeX Info: Redefining \longmapsto on input line 350.
+LaTeX Info: Redefining \longleftrightarrow on input line 351.
+LaTeX Info: Redefining \Longleftrightarrow on input line 352.
+LaTeX Info: Redefining \cdots on input line 356.
+LaTeX Info: Redefining \vdots on input line 359.
+LaTeX Info: Redefining \ddots on input line 364.
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/mh/mathstyle.sty
+Package: mathstyle 2010/11/17 v0.89
+LaTeX Info: Redefining \displaystyle on input line 77.
+LaTeX Info: Redefining \textstyle on input line 79.
+LaTeX Info: Redefining \scriptstyle on input line 81.
+LaTeX Info: Redefining \scriptscriptstyle on input line 83.
+LaTeX Info: Redefining \genfrac on input line 117.
+))
+\inf@bad=\count175
+\maxint=\count176
+\listwidth=\dimen123
+\eqnumsep=\dimen124
+\eqmargin=\dimen125
+\eqlinespacing=\skip60
+\eqlineskip=\skip61
+\eqlineskiplimit=\dimen126
+\eqbinoffset=\muskip11
+\eqdelimoffset=\muskip12
+\eqindentstep=\dimen127
+\eqstyle=\toks41
+\eqbreakdepth=\count177
+\eqinterlinepenalty=\count178
+\intereqpenalty=\count179
+\intereqskip=\skip62
+\prerelpenalty=\count180
+\prebinoppenalty=\count181
+\Dmedmuskip=\muskip13
+\Dthickmuskip=\muskip14
+\eqleftskip=\skip63
+\eqrightskip=\skip64
+\eq@vspan=\skip65
+\eq@binoffset=\muskip15
+\EQ@box=\box29
+\EQ@copy=\box30
+\EQ@numbox=\box31
+\eq@wdNum=\dimen128
+\GRP@numbox=\box32
+\grp@wdNum=\dimen129
+\eq@lines=\count182
+\eq@curline=\count183
+\eq@badness=\count184
+\EQ@vims=\count185
+\eq@dp=\dimen130
+\eq@wdL=\dimen131
+\eq@wdT=\dimen132
+\eq@wdMin=\dimen133
+\grp@wdL=\dimen134
+\grp@wdR=\dimen135
+\grp@wdT=\dimen136
+\eq@wdRmax=\dimen137
+\eq@firstht=\dimen138
+\eq@wdCond=\dimen139
+\eq@indentstep=\dimen140
+\eq@linewidth=\dimen141
+\grp@linewidth=\dimen142
+\eq@hshift=\dimen143
+\eq@given@sidespace=\dimen144
+\mathindent=\dimen145
+\eq@final@linecount=\count186
+\eq@wdR=\dimen146
+\EQ@continue=\toks42
+\lr@level=\count187
+\GRP@queue=\toks43
+\GRP@box=\box33
+\GRP@wholebox=\box34
+\darraycolsep=\skip66
+\cur@row=\count188
+\cur@col=\count189
+\conditionsep=\skip67
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(./spatialImplicature.aux)
+\openout1 = `spatialImplicature.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 52.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 52
+.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+\c@maskedRefs=\count190
+
+
+Package apacite Warning: Language definition file english.apc not found.
+
+(/opt/local/share/texmf-texlive-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count191
+\scratchdimen=\dimen147
+\scratchbox=\box35
+\nofMPsegments=\count192
+\nofMParguments=\count193
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count194
+\MPscratchDim=\dimen148
+\MPnumerator=\count195
+\makeMPintoPDFobject=\count196
+\everyMPtoPDFconversion=\toks45
+) (/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 53
+.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 53
+.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 53
+.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
+
+(./spatialImplicature.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+
+]
+(./spatialImplicature.aux) ) 
+Here is how much of TeX's memory you used:
+ 7748 strings out of 494770
+ 117609 string characters out of 3171573
+ 159013 words of memory out of 3000000
+ 10818 multiletter control sequences out of 15000+200000
+ 25210 words of font info for 54 fonts, out of 3000000 for 9000
+ 134 hyphenation exceptions out of 8191
+ 38i,9n,33p,250b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/opt/local/share/texmf-texlive-dist/fonts/enc/dvip
+s/base/8r.enc}</opt/local/share/texmf-texlive-dist/fonts/type1/urw/times/utmb8a
+.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on spatialImplicature.pdf (1 page, 29177 bytes).
+PDF statistics:
+ 17 PDF objects out of 1000 (max. 8388607)
+ 11 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
