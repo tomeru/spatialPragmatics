@@ -29,6 +29,7 @@
 \usepackage{amsmath}
 \usepackage{breqn}
 \usepackage{url}
+\usepackage{float}
 
 \title{[Cute title]: The Pragmatics of Spatial Language}
  
@@ -61,7 +62,19 @@ Pragmatics, implicature, spatial language
 
 \section{Introduction}
 
-Spatial language is cool. 
+The spatial world is rich and complex, but the spatial language we use is often coarse and limited. For example, English---like many other languages---has a restricted and closed class of spatial prepositions~\cite{talmy83,talmy00,landau93} such as ``in,'' ``on,'' and ``near'' that describe a potentially infinite set of spatial relations. This raises a natural question: How do we make accurate inference in spatial situations when our spatial vocabulary is somewhat impoverished?
+
+A plausible solution to this question is via pragmatic reasoning~\cite{}. In this account, listener would make inferences that go beyond the literal meaning of speaker's utterance by taking speaker's perspective in a given context. After all, inference is cheap and articulation is expensive~\cite{levinson00}, and we expect pragmatics to play a key role in enriching the core spatial vocabulary that can be limited under many different situations. 
+
+To illustrate this idea, we describe a simple scenario that provides the basis of our study. Figure~\ref{illustration} shows the map of a small city with two quarters (i.e. represented by the red and blue rectangles respectively) and a plaza (i.e. represented by the dashed circle), where the plaza is located inside the red quarter. Suppose you were told that ``a gold lily grew in the red quarter.'' Where would you think the flower had grown on the map? There are two possiblilities. In the first case, a listener who takes the literal meaning of ``in'' would infer the lily to have grown anywhere within the red square. This follows from the fact that the core meaning of ``in'' would simply refer to locations within the enclosure of the red rectangle as bounded by its sides. However, a more rational listener might instead reason as follows for a more precise spatial inference: ``If the lily had grown in the plaza, the speaker would have said that the lily grew in the plaza. However, given that she didn't say so, the lily must have grown within the red quarter but only in areas excluding that plaza.'' Thus, this pragmatic listener would be able to make a more specific prediction than the literal listener about where the lily might have grown, even though the speaker's utterance is identical in both cases. In this respect, pragmatic reasoning helps the listener to locate things beyond the core meaning of ``in'' relying on perspective taking (i.e. playing the role of speaker) and knowledge of the spatial situation (i.e. the fact that the plaza is located within the red square).
+
+\begin{figure}[H]
+\includegraphics[scale=.5]{figures/cityA1.png}
+\caption{Illustration of a simple spatial situation.}
+\label{illustration}
+\end{figure}
+
+In this study, we explore the pragmatics of spatial language using probabilistic programs~\cite{}. MAYBE NOAH CAN SAY SOMETHING HERE? Previous work has discussed the role of pragmatics in spatial locative expressions~\cite{herskovits85,herskovits87}. However, to our knowledge, formal work in this domain is scarce. Moreover, recent computational studies have emphasized speaker's role in the pragmatic use of spatial language~\cite{carstensen14,golland10}, but not how listener makes pragmatic inference based. We seek to bridge this gap with a computational model that makes quantitative predictions about listener's behavior guided by pragmatics in spatially informed situations. 
 
 \section{Modeling spatial implicature}\label{mod}
 
