@@ -19,17 +19,13 @@
 %% Change "letterpaper" in the following line to "a4paper" if you must.
 
 \documentclass[10pt,letterpaper]{article}
-
+\newcommand\tab[1][0.5cm]{\hspace*{#1}}
 \usepackage{cogsci}
 \usepackage{pslatex}
 \usepackage{apacite}
 \usepackage{graphicx}
-%\usepackage{subcaption}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{breqn}
-\usepackage{url}
-\usepackage{float}
+\usepackage[usenames, dvipsnames]{color}
+
 
 \title{[Cute title]: The Pragmatics of Spatial Language}
  
@@ -68,7 +64,7 @@ A plausible solution to this question is via pragmatics~\cite{grice75,horn84}. O
 
 To illustrate this idea, we describe a simple scenario that provides the basis of our study. Figure~\ref{illustration} shows the map of a small city with two quarters (i.e. represented by the red and blue rectangles respectively) and a plaza (i.e. represented by the dashed circle), where the plaza is located inside the red quarter. Suppose you were told that ``a gold lily grew in the red quarter.'' Where would you think the flower had grown on the map? There are two possiblilities. In the first case, a listener who takes the literal meaning of ``in'' would infer the lily to have grown anywhere within the red square. This follows from the fact that the core meaning of ``in'' would simply refer to locations within the enclosure of the red rectangle as bounded by its sides. However, a more sophisticated listener might instead reason as follows for a more precise spatial inference: ``If the lily had grown in the plaza, the speaker would have said that the lily grew in the plaza. However, given that she didn't say so, the lily must have grown within the red quarter but in areas excluding that plaza.'' Thus, this pragmatic listener would be able to make a more specific prediction than the literal listener about where the lily might have grown, even though the speaker's utterance is identical in both cases. In this respect, pragmatic reasoning helps the listener to locate things beyond the precision of what the meaning of ``in'' conventionally renders by combining perspective taking (i.e. playing the role of speaker) with one's knowledge of the spatial situation (i.e. the fact that the plaza is located inside the red square).
 
-\begin{figure}[H]
+\begin{figure}[h]
 \includegraphics[scale=.5]{figures/cityA1.png}
 \caption{Illustration of a simple spatial situation.}
 \label{illustration}
@@ -80,25 +76,116 @@ To preview our results ... MAYBE TOMER CAN FILL IN THE EXCITING RESULTS PREVIEW 
 
 \section{Modeling spatial implicature}\label{mod}
 
-Let's model it!
+We model spatial implicature using the rational speaker-listener model applied previously to domains such as scalar implicature and social reasoning \cite{ndg+ast:topics2013,ast+ndg:cogsys2013}. We consider a speaker and listener as in the sketch shown in Figure (**). Both speaker and listener have access to a shared lexicon that contains a mapping from possible utterances to predicates that return Boolean values over states of the world. For example, in our specific lexicon the utterance ``in Red Quarter'' maps to a predicate that takes in a location  and returns the value $True$ if that location falls within the boundaries of the Red Quarter rectangle, and $False$ otherwise. We expand on the lexicon details further down. 
+
+The listener attempts to infer the true state of where an event occurred in the world ($s$), by considering the utterance they heard from the speaker ($u$), and the listener's knowledge of the world and the speaker. We consider two possible listeners. The first is a \textit{literal} listener ($L_0$) who understands an utterance by strictly referring to its meaning in a lexicon, modulated by the prior probability of a state occurring:
+
+\begin{equation}
+P_{L_0}(s|u)\propto P(s|u(s)=True)P(u),
+\end{equation}
+
+A speaker faced with such a literal listener ($S_0$) will choose an utterance that will maximize the probability of the listener inferring the correct state $s$. In continuous spatial distributions an exact equality between the observed state $s$ and the listener's inferred state $s'$ cannot be expected, and it is only required that an approximate equality condition holds $s\approx s'$. In this paper we use $|s-s'|<\epsilon$, though other approximate equality conditions are possible. The speaker is then:
+
+(*** Not sure about the exact equation to put down here ***)
+\begin{equation}
+P_{S_0}(u|s)\propto ***
+\end{equation}
+
+The second possible listener is a \textit{pragmatic} listener ($L_1$), who takes into account the speaker's reasoning when choosing an utterance:
+
+\begin{equation}
+P_{L_1}(s|u)\propto P_{S_0}(u|s)P(s)
+\end{equation}
+
+Such recursive, probabilistic reasoning can be captured as a probabilistic program. We implemented the model in the Church language (cite, website?) along the following lines: \\
+
+\texttt{({\color{blue}{define}} (speaker state)}\\
+\texttt{\tab ({\color{blue}{rejection-query}}}\\
+\texttt{\tab  ({\color{blue}{define}} utterance (sample utterance-prior))}\\
+\texttt{\tab   \color{BurntOrange};; Return utterance...}\\
+\texttt{\tab   utterance}\\
+\texttt{\tab   \color{BurntOrange};; Conditioned on...}\\
+\texttt{\tab  (about-equal state (listener utterance 0))))}\\
+\texttt{}\\
+\texttt{({\color{blue}{define}} (listener utterance depth)}\\
+\texttt{\tab ({\color{blue}{rejection-query}}}\\
+\texttt{\tab  (define state (sample state-prior))}\\
+\texttt{\tab   \color{BurntOrange};; Return state...}\\
+\texttt{\tab  state}\\
+\texttt{\tab   \color{BurntOrange};; Conditioned on...}\\
+\texttt{\tab  ({\color{blue}{if}} (= depth 0)}\\
+\texttt{\tab \tab \tab  (utterance state)}\\
+\texttt{\tab \tab \tab  (equal? utterance (speaker state))))}\\
+
+Listeners of depth 0 and 1 are \textit{literal} listener $L_0$ and \textit{pragmatic} listener $L_1$ as defined above. While higher combinations of listener and speaker depths are useful in games of social coordination (CITE), in many tasks the \textit{pragmatic} listener model is sufficient, and here we are interesting is seeing how well it models people's behavior in a spatial task above that of a \textit{literal} listener. 
+
+\subsubsection{Utterance lexicon} The utterances are implemented as boolean functions that take in a state of the world (the x,y pair where an event occurred) and return $True$ or $False$. We considered three types of spatial utterances: ``In'' utterances (e.g. ``In the Red Quarter'') return $True$ if the event falls within the boundaries of a region and $False$ otherwise. ``Near-edge'' utterances (e.g. ``Near the edge of the Red Quarter'') return $True$ if the event is within a distance $d$ of the boundaries of a region and $False$ otherwise. ``Near'' utterances (e.g. ``Near the Red Quarter'') return $True$ if the event is near the edge of a region but not in it, as defined by the ``In'' and ``Near-edge'' utterances. People no doubt have access to many more spatial utterances and their combinations, but we restrict ourselves to this set for simplicity. 
+
+\subsubsection{Parameter choice} The model as stated leaves open the question of what distance counts as ``Near'' or ``Near the edge'' in the shared lexicon (what $d$ to use), as well as what counts as ``approximately equal'' between the true state and the inferred state (what $\epsilon$ to use). We set both $d$ and $\epsilon$ at 10 units (pixels). A fuller treatment of ``Near'' will need to use a more region-size-dependent choice of $d$ (`near your coffee mug' is not the same as `near your coffee house'), but is not considered here. 
+
+\begin{figure*}[!t]
+\center
+\includegraphics[width=.82\textwidth]{figures/In.pdf}
+\caption{Results across `In' utterances. Dots are guesses of where a Gold Lily grew, color coded by region `In' refers to.}
+\label{fig:In}
+\end{figure*}
+
+\begin{figure*}[!]
+\center
+\includegraphics[width=.82\textwidth]{figures/Near.pdf}
+\caption{Results across `Near' utterances.}
+\label{fig:Near}
+\end{figure*}
 
 \section{Experiment}\label{sec:exps}
 
-Let's test it with. 
+We examined people's spatial inferences and the predictions of our model regarding the spatial terms `in' and `near', by putting participants in the role of a listener and asking them to guess where an event happened on a map in response to an utterance of a speaker who had access to the location of the event. 
 
-\subsubsection{Participants} Here's who we asked. 
+\subsection{Participants, materials and methods}
 
-\subsubsection{Method.} This is what we asked them. 
+Participants ($N=49$, 13 female, median age 29) were recruited through Amazon's Mechanical Turk service. 
 
-\subsubsection{Results.} This is what they answered. 
+We constructed 4 simple city maps (see Fig. XX), each containing 2 ``Quarters'' of different size and color, and a circle marked as ``Victory Plaza''. The location of Victory Plaza varied among the 4 cities, while the location of the Quarters remained the same. To broadly control for effects of color and position, we created another set of 4 maps by flipping the original maps along the vertical and horizontal axis, and changing the color of the quarters, making 8 maps in total. Participants were randomly assigned to one of the two map groups. 
 
-\section{Comparison to model}
+\begin{figure*}[!t]
+\center
+\includegraphics[width=\textwidth]{figures/results1.pdf}
+\caption{zoom in on results}
+\label{fig:zoomIn}
+\end{figure*}
+
+Participants were shown an example map including a legend (as in Figure ***), and were informed that throughout the experiment they would see similar maps. Participants were told that anywhere in the city they're shown, a special flower called a `Gold Lily' can grow, and that their task is to find the Gold Lilies. 
+
+Participants were further told that in their task a person will tell them where a Gold Lily grew, and that this person can say the Gold Lily grew \textit{in} a location or \textit{near} a location. This person was also said to be reasonable, and honest. As an example, a participant might read the sentence `A person tells you: A Gold Lily grew in the Red Quarter'. Participants made their guess by clicking directly on the maps they were shown.
+
+For each of the 4 maps in their group, participants were prompted with a sentence made of $word \times location$ combinations, where $word \in [In,\ Near]$ and $location \in [Red\ Quarter,\ Blue\ Quarter,\ Victory\ Plaza,\ City]$. We chose not to include the combination ``Near the City'', as this area was not in the scope of the image and likely to create confusion. In total, each participant was prompted with 28 different sentences, shown in random order. Each map had a legend clearly displayed to its right. 
+
+\subsection{Qualitative Results} 
+
+Figures \ref{fig:In} and \ref{fig:Near} show participants' guesses on the maps by spatial word, location and city, collapsing across the rotated-and-inverted-color cities and color-coded by the reference of the word. For example, in the top-left \ref{fig:In}, the blue dots correspond to all participant guesses for where the Gold Lily grew in City 1 when prompted with `In the Blue Quarter'. 
+
+Any combination of word, location and city out of the 28 possibilities is informative, but space does not allow out. Instead, we focus on several general findings, making reference to particular examples in Figure \ref{fig:zoomIn}, and the reader is encouraged to consider other combinations for themselves.
+
+\subsubsection{`In X' implies `In X except Y'} As shown for example in Figure \ref{fig:zoomIn}(a): When people hear `In Blue' in City 2 (bottom) they infer `In Blue, but not in the Plaza'. Both the top and bottom of (a) show participant guesses for the lily location when told it grew in the Blue Quarter. In the top figure (Blue Quarter without Plaza) people place most of their guesses in the center of the Quarter (a tic-tac-toe-like division of the Quarter shows that the grid center, accounting for 11\% of the area, captures 59\% of the guesses). In the bottom figure (Blue Quarter with Plaza), people avoid the same center (the grid center captures 8\% of the guesses) while shifting to the right of the Plaza. Such a pattern of results holds for the other regions as well as shown in Figure \ref{fig:In}. 
+
+\subsubsection{Edge avoidance} When there is no direct intersection between regions (except with the City, that all regions intersect with), people are not placing a uniform probability on the region, but rather on its center. For example, in Figure \ref{fig:zoomIn}(b): When people hear `In Red' in City 2 that has no Plaza in it(bottom), they place most of their guesses in the center of the region. A grid-analysis shows the red-grid center accounts for 65\% of the guesses, as opposed to the 11\% expected by chance. Using 10,000 bootstrapped simulations of 49 subjects drawn from a uniform distribution on the Red Quarter shows that in \textit{none} of them does the center account for more than ~30\% of the responses. 
+
+\subsubsection{`Near' is non uniform on edges} As shown in Figure \ref{fig:zoomIn}(c) and (d), when told `Near Plaza' or `Near Blue', people do not place a uniform probability on edges of regions. In (c), people place most of their guesses to the top-and-left of the Plaza (top) or in the top-and-right of the Plaza. In (d), people place most of their guesses to the left-and-bottom of the Blue Quarter (top) or the bottom of the Blue Quarter (bottom). 
+
+This pattern of results is explicitly qualitative. In the next section, we turn to a more quantitative analysis, comparing people's results with the different listener models. 
+
+\section{Comparison to Model(s)}
 
 Hooray for implicature (p<0.05)
 
 \section{Discussion}
 
 Slack n such
+
+%%%%%%
+
+
+%%%%%%%%
 
 \bibliographystyle{apacite}
 \setlength{\bibleftmargin}{.125in}
