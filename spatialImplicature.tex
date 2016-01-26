@@ -123,6 +123,8 @@ Listeners of depth 0 and 1 are \textit{literal} listener $L_0$ and \textit{pragm
 
 \subsubsection{Parameter choice} The model as stated leaves open the question of what distance counts as ``Near'' or ``Near the edge'' in the shared lexicon (what $d$ to use), as well as what counts as ``approximately equal'' between the true state and the inferred state (what $\epsilon$ to use). We set both $d$ and $\epsilon$ at 10 units (pixels). A fuller treatment of ``Near'' will need to use a more region-size-dependent choice of $d$ (`near your coffee mug' is not the same as `near your coffee house'), but is not considered here. 
 
+*** NEED TO REWRITE THIS TO REFLECT THE NEW MODEL THAT INTEGRATES OVER NEAR DISTS. ALSO MENTION `SHARPENING PARAMETER'.
+
 \begin{figure*}[!t]
 \center
 \includegraphics[width=.82\textwidth]{figures/In.pdf}
@@ -172,17 +174,33 @@ Any combination of word, location and city out of the 28 possibilities is inform
 
 \subsubsection{`Near' is non uniform on edges} As shown in Figure \ref{fig:zoomIn}(c) and (d), when told `Near Plaza' or `Near Blue', people do not place a uniform probability on edges of regions. In (c), people place most of their guesses to the top-and-left of the Plaza (top) or in the top-and-right of the Plaza. In (d), people place most of their guesses to the left-and-bottom of the Blue Quarter (top) or the bottom of the Blue Quarter (bottom). 
 
-This pattern of results is explicitly qualitative. In the next section, we turn to a more quantitative analysis, comparing people's results with the different listener models. 
+While showing some examples of spatial implicature, this pattern of results is explicitly qualitative. In the next section, we turn to a more quantitative analysis, comparing people's results with the different listener models. 
 
 \section{Comparison to Model(s)}
 
-Hooray for implicature (p<0.05)
+\begin{figure*}[!t]
+\center
+\includegraphics[width=\textwidth]{figures/Figure4.pdf}
+\caption{Example comparisons between people and the two listener models. Colored patches indicate probability distributions inferred from people's responses and model samples. Numbers to the right of each listener subplot indicate the $KL$ distance between the distributions of people and the model samples, lower is better.}
+\label{fig:modelExamples}
+\end{figure*}
+
+In order to quantitatively compare people to the literal listener and pragmatic listener models ($L_0$ and $L_1$), we converted their responses into two-dimensional distributions. We used non-parametric, multivariate kernel density estimation to infer these distributions. The same estimation was applied to samples drawn from the probabilistic programs that represent the $L_0$ and $L_1$. 
+
+Example comparisons are shown in Figure \ref{fig:modelExamples}. When hearing `In Red' in City 1 (left-most column) The literal listener $L_0$ places a uniform posterior distribution on the Red Quarter, while $L_1$ and people avoid Victory Plaza and lean to the right of the Red Quarter. This correspondence can be measured in terms of the Kullback–-Leibler ($KL$) distance between the distributions. In this particular example, $KL(people, L_0) = 0.43$, while $KL(people, L_1) = 0.25$. Other columns in Figure \ref{fig:modelExamples} show examples of correspondence between people's implicature inferences and $L_1$. The $L_1$ listener also shows the same general qualitative patterns as people, discussed in the previous section. A full comparison figure is beyond the the scope of this paper, but can be found here: (*LINK*).
+
+\begin{figure}[!t]
+\center
+\includegraphics[width=0.45\textwidth]{figures/KL.pdf}
+\caption{KL distances between distributions inferred from people and the two listener models, organized by question and city. Hatched bars are the literal listener $L_0$ and plain bars are the pragmatic listener $L_1$. The color of the bar codes the question as before.}
+\label{fig:KL}
+\end{figure}
+
+In terms of $KL$ distance, the pragmatic listener $L_1$ is closer to people than the literal listener for 26 of the 28 (93\%) possible comparisons. Figure \ref{fig:KL} shows the distribution of the distances for both listener models. These results suggest that the pragmatic listener model is able to account for the quantitative pattern of pragmatic spatial inferences of people, within our domain.  
 
 \section{Discussion}
 
-Slack n such
 
-%%%%%%
 
 
 %%%%%%%%

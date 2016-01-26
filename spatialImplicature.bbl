@@ -1,3 +1,312 @@
 \begin{thebibliography}{}
 
+\bibitem [\protect \citeauthoryear {%
+Carstensen%
+, Kon%
+\BCBL {}\ \BBA {} Regier%
+}{%
+Carstensen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+carstensen14}
+\APACinsertmetastar {%
+carstensen14}%
+\begin{APACrefauthors}%
+Carstensen, A.%
+, Kon, E.%
+\BCBL {}\ \BBA {} Regier, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Testing a rational account of pragmatic reasoning: The
+  case of spatial language} {Testing a rational account of pragmatic reasoning:
+  The case of spatial language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{}{}{}{2009--2013}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Golland%
+, Liang%
+\BCBL {}\ \BBA {} Klein%
+}{%
+Golland%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+golland10}
+\APACinsertmetastar {%
+golland10}%
+\begin{APACrefauthors}%
+Golland, D.%
+, Liang, P.%
+\BCBL {}\ \BBA {} Klein, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A game-theoretic approach to generating spatial
+  descriptions} {A game-theoretic approach to generating spatial
+  descriptions}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 2010 conference on empirical methods
+  in natural language processing} {Proceedings of the 2010 conference on
+  empirical methods in natural language processing}\ (\BPGS\ 410--419).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Goodman%
+\ \BBA {} Stuhlm\"{u}ller%
+}{%
+Goodman%
+\ \BBA {} Stuhlm\"{u}ller%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+ndg+ast:topics2013}
+\APACinsertmetastar {%
+ndg+ast:topics2013}%
+\begin{APACrefauthors}%
+Goodman, N\BPBI D.%
+\BCBT {}\ \BBA {} Stuhlm\"{u}ller, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Knowledge and implicature: Modeling language
+  understanding as social cognition} {Knowledge and implicature: Modeling
+  language understanding as social cognition}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Grice%
+}{%
+Grice%
+}{%
+{\protect \APACyear {1975}}%
+}]{%
+grice75}
+\APACinsertmetastar {%
+grice75}%
+\begin{APACrefauthors}%
+Grice, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1975}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Logic and Conversation} {Logic and conversation}.{\BBCQ}
+\newblock
+\BIn{} P.~Cole\ \BBA {} J.~Morgan\ (\BEDS), \APACrefbtitle {Syntax and
+  Semantics, vol.3} {Syntax and semantics, vol.3}\ (\BPGS\ 41--58).
+\newblock
+\APACaddressPublisher{}{Academic Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Herskovits%
+}{%
+Herskovits%
+}{%
+{\protect \APACyear {1985}}%
+}]{%
+herskovits85}
+\APACinsertmetastar {%
+herskovits85}%
+\begin{APACrefauthors}%
+Herskovits, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1985}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Semantics and Pragmatics of Locative Expressions*}
+  {Semantics and pragmatics of locative expressions*}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive Science}{9}{3}{341--378}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Herskovits%
+}{%
+Herskovits%
+}{%
+{\protect \APACyear {1987}}%
+}]{%
+herskovits87}
+\APACinsertmetastar {%
+herskovits87}%
+\begin{APACrefauthors}%
+Herskovits, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1987}.
+\newblock
+\APACrefbtitle {Language and spatial cognition} {Language and spatial
+  cognition}.
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Horn%
+}{%
+Horn%
+}{%
+{\protect \APACyear {1984}}%
+}]{%
+horn84}
+\APACinsertmetastar {%
+horn84}%
+\begin{APACrefauthors}%
+Horn, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1984}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Toward a new taxonomy for pragmatic inference: Q-based
+  and R-based implicature} {Toward a new taxonomy for pragmatic inference:
+  Q-based and r-based implicature}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Meaning, form, and use in context: Linguistic
+  applications}{}{}{11--42}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Landau%
+\ \BBA {} Jackendoff%
+}{%
+Landau%
+\ \BBA {} Jackendoff%
+}{%
+{\protect \APACyear {1993}}%
+}]{%
+landau93}
+\APACinsertmetastar {%
+landau93}%
+\begin{APACrefauthors}%
+Landau, B.%
+\BCBT {}\ \BBA {} Jackendoff, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Whence and whither in spatial language and spatial
+  cognition?} {Whence and whither in spatial language and spatial
+  cognition?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Behavioral and Brain Sciences}{16}{02}{255--265}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Levinson%
+}{%
+Levinson%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+levinson00}
+\APACinsertmetastar {%
+levinson00}%
+\begin{APACrefauthors}%
+Levinson, S\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2000}.
+\newblock
+\APACrefbtitle {Presumptive meanings: {T}he theory of generalized
+  conversational implicature} {Presumptive meanings: {T}he theory of
+  generalized conversational implicature}.
+\newblock
+\APACaddressPublisher{}{MIT Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Stuhlm\"{u}ller%
+\ \BBA {} Goodman%
+}{%
+Stuhlm\"{u}ller%
+\ \BBA {} Goodman%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+ast+ndg:cogsys2013}
+\APACinsertmetastar {%
+ast+ndg:cogsys2013}%
+\begin{APACrefauthors}%
+Stuhlm\"{u}ller, A.%
+\BCBT {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reasoning about Reasoning by Nested Conditioning:
+  Modeling Theory of Mind with Probabilistic Programs} {Reasoning about
+  reasoning by nested conditioning: Modeling theory of mind with probabilistic
+  programs}.{\BBCQ}
+\newblock
+
+\newblock
+\begin{APACrefDOI} \doi{http://dx.doi.org/10.1016/j.cogsys.2013.07.003}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Talmy%
+}{%
+Talmy%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+talmy83}
+\APACinsertmetastar {%
+talmy83}%
+\begin{APACrefauthors}%
+Talmy, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1983}.
+\newblock
+\APACrefbtitle {How language structures space} {How language structures space}.
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Talmy%
+}{%
+Talmy%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+talmy00}
+\APACinsertmetastar {%
+talmy00}%
+\begin{APACrefauthors}%
+Talmy, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+\APACrefbtitle {Towards a cognitive semantics, {V}olume 1: {C}oncept
+  {S}tructuring {S}ystems.} {Towards a cognitive semantics, {V}olume 1:
+  {C}oncept {S}tructuring {S}ystems.}
+\newblock
+\APACaddressPublisher{}{MIT Press}.
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}

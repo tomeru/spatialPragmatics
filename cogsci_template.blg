@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2011/MacPorts 2011_5)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: cogsci_template.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=5001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: CogSci_Template.bib
+Warning--I didn't find a database entry for "talmy83"
+Warning--I didn't find a database entry for "talmy00"
+Warning--I didn't find a database entry for "landau93"
+Warning--I didn't find a database entry for "grice75"
+Warning--I didn't find a database entry for "horn84"
+Warning--I didn't find a database entry for "levinson00"
+Warning--I didn't find a database entry for "herskovits85"
+Warning--I didn't find a database entry for "herskovits87"
+Warning--I didn't find a database entry for "carstensen14"
+Warning--I didn't find a database entry for "golland10"
+apacite.bst [2012/02/25 v6.01 APA bibliography style]
+You've used 7 entries,
+            6735 wiz_defined-function locations,
+            1299 strings with 11593 characters,
+and the built_in function-call counts, 12411 in all, are:
+= -- 1676
+> -- 108
+< -- 450
++ -- 469
+- -- 14
+* -- 679
+:= -- 2041
+add.period$ -- 33
+call.type$ -- 7
+change.case$ -- 122
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 302
+empty$ -- 525
+format.name$ -- 144
+if$ -- 2543
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 0
+newline$ -- 174
+num.names$ -- 59
+pop$ -- 275
+preamble$ -- 1
+purify$ -- 28
+quote$ -- 0
+skip$ -- 933
+stack$ -- 0
+substring$ -- 584
+swap$ -- 176
+text.length$ -- 35
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 752
+warning$ -- 0
+while$ -- 49
+width$ -- 0
+write$ -- 203
+(There were 10 warnings)

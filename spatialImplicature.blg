@@ -2,7 +2,6 @@ This is BibTeX, Version 0.99d (TeX Live 2011/MacPorts 2011_5)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: spatialImplicature.aux
 The style file: apacite.bst
-I found no \citation commands---while reading file spatialImplicature.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=5001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -13,45 +12,48 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: cogscibib.bib
 apacite.bst [2012/02/25 v6.01 APA bibliography style]
-You've used 0 entries,
+Warning--No journal in carstensen14
+Warning--No journal in ndg+ast:topics2013
+Warning--No journal in ast+ndg:cogsys2013
+You've used 12 entries,
             6735 wiz_defined-function locations,
-            1235 strings with 10349 characters,
-and the built_in function-call counts, 42 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 1
-:= -- 31
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            1302 strings with 12128 characters,
+and the built_in function-call counts, 21123 in all, are:
+= -- 2689
+> -- 161
+< -- 963
++ -- 942
+- -- 24
+* -- 1290
+:= -- 3865
+add.period$ -- 53
+call.type$ -- 12
+change.case$ -- 206
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 27
+duplicate$ -- 477
+empty$ -- 867
+format.name$ -- 240
+if$ -- 4094
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 24
 missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+newline$ -- 288
+num.names$ -- 98
+pop$ -- 450
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 48
 quote$ -- 0
-skip$ -- 1
+skip$ -- 1418
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 1051
+swap$ -- 285
+text.length$ -- 35
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 1088
+warning$ -- 3
+while$ -- 86
 width$ -- 0
-write$ -- 2
-(There was 1 error message)
+write$ -- 337
+(There were 3 warnings)
