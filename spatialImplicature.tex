@@ -118,7 +118,6 @@ P_{L_1}(s|u)&\propto&P_{S_1}(u | s) P(s) \label{eqn:L1}\\
 P_{S_1}(u|s)&\propto&\sum_{s' \text{ s.t. } |s-s'|<\epsilon} P_{L_0}(s'|u) P(u)\label{eqn:S1}\\
 P_{L_0}(s|u)&\propto& \delta_{\denote{u}(s)} P(s)\label{eqn:L0}
 \end{eqnarray}
-\ndg{do we want to make the context (city) explicit in these eqns? the tolerances?}
 Beginning with the simplest listener model, $L_0$, Equation \ref{eqn:L0} specifies a listener who interprets the utterance via its truth-functional denotation, $\denote{u}$ described in more detail below, and simply restricts the prior distribution over locations to those where this denotation is true.
 The speaker, $S_1$, in Equation \ref{eqn:S1} aims for the literal listener to guess the correct location, balanced against the prior probability (i.e.~cost) of the utterance. \ndg{do we use cost here? if not remove from eqns.}
 However, because it is vanishingly unlikely for $L_0$ to guess exactly the right location, our speaker only cares if the location is within a small distance $\epsilon$; this corresponds to an \emph{approximate question under discussion} as used by \citeA{kao2014}.
@@ -174,8 +173,9 @@ Finally, the pragmatic listener, $L_1$, in Equation \ref{eqn:L1} updates her bel
 %\subsubsection{Lexicon} 
 
 
+The denotation of an utterance $u$ is a function from position to Boolean: $\denote{u}(s)\in \text{Bool}$.
 We will assume that the spatial language relevant to our scenarios depends on a context set of regions in $\mathbb{R}^2$.
-The denotation of an utterance $u$ in a context $C$ is a function from position to Boolean: $\denote{u}^C(s)\in \text{Bool}$.
+(As in Figure \ref{illustration}: The City, The Red Quarter, The Blue Quarter, The Victory Plaza.)\footnote{Both the denotation and Equations \ref{eqn:L0}-\ref{eqn:L1} depend on the context of named regions. We leave this dependence implicit to avoid clutter.}
 %The utterances are implemented as boolean functions that take in a state of the world (the x,y pair where an event occurred) and return $True$ or $False$. 
 We considered three types of spatial utterances, each of which combines a preposition with a region name: 
 \begin{itemize}
@@ -184,7 +184,7 @@ We considered three types of spatial utterances, each of which combines a prepos
 \item ``Near'' utterances (e.g. ``Near the Red Quarter'') are true near the edge but not inside: $\denote{\text{``near R''}}(s) := 
 \denote{\text{``near edge R''}}(s) \wedge \neg \denote{\text{``in R''}}(s)$.
 \end{itemize}
-People no doubt have access to many more spatial utterances and their combinations, but we restrict ourselves to this set for simplicity. 
+People no doubt have access to many more spatial utterances, and their combinations, but we restrict ourselves to this set for simplicity. 
 
 
 % return $True$ if the event falls within the boundaries of a region and $False$ otherwise. ``Near-edge'' utterances (e.g. ``Near the edge of the Red Quarter'') return $True$ if the event is within a distance $d$ of the boundaries of a region and $False$ otherwise. ``Near'' utterances (e.g. ``Near the Red Quarter'') return $True$ if the event is near the edge of a region but not in it, as defined by the ``In'' and ``Near-edge'' utterances. 
@@ -193,13 +193,11 @@ People no doubt have access to many more spatial utterances and their combinatio
 
 %\subsubsection{Parameter choice} 
 
-The model as stated leaves open the question of what distance counts as ``Near'' or ``Near the edge'' in the shared lexicon (what $d$ to use), as well as what counts as ``approximately equal'' between the true state and the inferred state (what $\epsilon$ to use). We set both $d$ and $\epsilon$ at 10 units (pixels). A fuller treatment of ``Near'' will need to use a more region-size-dependent choice of $d$ (`near your coffee mug' is not the same as `near your coffee house'), but is not considered here. 
-
-\ndg{NEED TO REWRITE THIS TO REFLECT THE NEW MODEL THAT INTEGRATES OVER NEAR DISTS. ALSO MENTION `SHARPENING PARAMETER'.}
-
-We replace Equation \ref{eqn:L0} with a version that has uncertainty about the tolerances for each ``near'' utterance:
+The model as stated leaves open the question of what distance counts as ``Near'' or ``Near the edge'' in the shared lexicon (what $d$ to use), as well as what counts as ``approximately equal'' between the true state and the inferred state (what $\epsilon$ to use). We set $\epsilon$ to 10 units (pixels), based on initial exploration. 
+Because the intuitive flexibility of ``Near'' seems to depend on the item and context (``near your coffee mug'' is not the same as ``near your coffee house''), we allow the literal listener to establish the most useful $d$ for each utterance.
+We extend Equation \ref{eqn:L0} to include uncertainty about the tolerances for each ``near'' utterance:
 \begin{equation}
-P_{L_0}(s|u)\propto \delta_{\denote{u}_{\vec{d}}(s)} P(s) P(\vec{d})\label{eqn:L0tol},
+P_{L_0}(s|u)\propto \sum_{\vec{d}} \delta_{\denote{u}_{\vec{d}}(s)} P(s) P(\vec{d})\label{eqn:L0tol},
 \end{equation}
 where $\vec{d}$ is a real number, the tolerance, for each utterance. We assume $P(\vec{d})$ is uniform over \ndg{some range}.
 
