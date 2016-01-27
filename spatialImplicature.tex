@@ -22,6 +22,7 @@
 \newcommand\tab[1][0.5cm]{\hspace*{#1}}
 \usepackage{cogsci}
 \usepackage{pslatex}
+\usepackage{hyperref}
 \usepackage{apacite}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -95,16 +96,15 @@ Thus, no studies have looked at the quantitative effects of implicature in the s
 %There are two possiblilities. In the first case, a listener who takes the literal meaning of ``in'' would infer the lily to have grown anywhere within the red square. This follows from the fact that the core meaning of ``in'' would simply refer to locations within the enclosure of the red rectangle as bounded by its sides. However, a more sophisticated listener might instead reason as follows for a more precise spatial inference: ``If the lily had grown in the plaza, the speaker would have said that the lily grew in the plaza. However, given that she didn't say so, the lily must have grown within the red quarter but in areas excluding that plaza.'' Thus, this pragmatic listener would be able to make a more specific prediction than the literal listener about where the lily might have grown, even though the speaker's utterance is identical in both cases. In this respect, pragmatic reasoning helps the listener to locate things beyond the precision of what the meaning of ``in'' conventionally renders by combining perspective taking (i.e. playing the role of speaker) with one's knowledge of the spatial situation (i.e. the fact that the plaza is located inside the red square).
 
 \begin{figure}[h]
-\includegraphics[scale=.5]{figures/cityA1.png}
+\center
+\includegraphics[width=.5\textwidth]{figures/illustration2.pdf}
 \caption{Illustration of a simple spatial situation.}
 \label{illustration}
 \end{figure}
 
-
-
 %In this study, we explore the relation between pragmatics and spatial language using probabilistic programs~\cite{}. MAYBE NOAH CAN SAY SOMETHING HERE? 
 
-To preview our results ... MAYBE TOMER CAN FILL IN THE EXCITING RESULTS PREVIEW HERE? \ndg{or we could just move on to the meat....}
+% To preview our results ... MAYBE TOMER CAN FILL IN THE EXCITING RESULTS PREVIEW HERE? \ndg{or we could just move on to the meat....}
 
 \section{Modeling spatial implicature}\label{mod}
 
@@ -203,7 +203,7 @@ P_{L_0}(s|u)\propto \delta_{\denote{u}_{\vec{d}}(s)} P(s) P(\vec{d})\label{eqn:L
 \end{equation}
 where $\vec{d}$ is a real number, the tolerance, for each utterance. We assume $P(\vec{d})$ is uniform over \ndg{some range}.
 
-We implement this model in the probabilistic programming language Church \cite{goodman2008}. A full implementation can be found at ****put on forest? or just on website****. We used this implementation to generate predictions for each spatial configuration (``city'') used in the experiment below, and for each utterance.
+We implement this model in the probabilistic programming language Church \cite{goodman2008}. A full implementation can be found at \url{http://forestdb.org/models/spatialImplicature.html}. We used this implementation to generate predictions for each spatial configuration (``city'') used in the experiment below, and for each utterance.
 
 
 \begin{figure*}[!t]
