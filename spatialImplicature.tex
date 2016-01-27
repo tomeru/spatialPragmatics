@@ -272,9 +272,14 @@ In the next section, we turn to a quantitative analysis, comparing results with 
 \label{fig:modelExamples}
 \end{figure*}
 
-In order to quantitatively compare people to the literal listener and pragmatic listener models ($L_0$ and $L_1$), we converted their responses into two-dimensional distributions. We used non-parametric, multivariate kernel density estimation to infer these distributions. The same estimation was applied to samples drawn from the probabilistic programs that represent the $L_0$ and $L_1$. 
+In order to quantitatively compare people to the literal listener and pragmatic listener models ($L_0$ and $L_1$), we converted their responses into smooth two-dimensional distributions. We used non-parametric, multivariate kernel density estimation to infer these distributions \ndg{cite?}. The same estimation procedure was applied to samples drawn from the probabilistic programs that represent the $L_0$ and $L_1$ models. 
 
-Example comparisons are shown in Figure \ref{fig:modelExamples}. When hearing `In Red' in City 1 (left-most column) The literal listener $L_0$ places a uniform posterior distribution on the Red Quarter, while $L_1$ and people avoid Victory Plaza and lean to the right of the Red Quarter. This correspondence can be measured in terms of the Kullback–-Leibler ($KL$) distance between the distributions. In this particular example, $KL(people, L_0) = 0.43$, while $KL(people, L_1) = 0.25$. Other columns in Figure \ref{fig:modelExamples} show examples of correspondence between people's implicature inferences and $L_1$. The $L_1$ listener also shows the same general qualitative patterns as people, discussed in the previous section. A full comparison figure is beyond the the scope of this paper, but can be found here: (*LINK*).
+Example comparisons are shown in Figure \ref{fig:modelExamples}. When hearing `In Red' in City 1 (left-most column) The literal listener $L_0$ places a uniform posterior distribution on the Red Quarter, while $L_1$ and people avoid Victory Plaza and lean to the right of the Red Quarter. This correspondence can be measured in terms of the Kullback–-Leibler ($KL$) distance between the distributions. In this particular example, $KL(\text{people} | L_0) = 0.43$, while $KL(\text{people} | L_1) = 0.25$. 
+The pragmatic listener $L_1$ is closer to people than the literal listener for 26 of the 28 (93\%) possible comparisons. Figure \ref{fig:KL} shows the distribution of the distances for both listener models. 
+
+As Figure \ref{fig:modelExamples} shows, the $L_1$ model captures many of the interesting implicature-like interpretations shown by people.
+%examples of correspondence between people's implicature inferences and $L_1$. 
+Indeed, the $L_1$ listener shows the same general qualitative patterns discussed in the previous section. A full comparison figure is would exceed the space limits of this paper, but can be found here: (*LINK*).
 
 \begin{figure}[!t]
 \center
@@ -283,11 +288,14 @@ Example comparisons are shown in Figure \ref{fig:modelExamples}. When hearing `I
 \label{fig:KL}
 \end{figure}
 
-In terms of $KL$ distance, the pragmatic listener $L_1$ is closer to people than the literal listener for 26 of the 28 (93\%) possible comparisons. Figure \ref{fig:KL} shows the distribution of the distances for both listener models. These results suggest that the pragmatic listener model is able to account for the quantitative pattern of pragmatic spatial inferences of people, within our domain.  
+
+\ndg{i wonder what it would look like to make a model-data scatter plot by binning counts on a grid?}
+
+These results suggest that the pragmatic listener model is able to account for the quantitative pattern of pragmatic spatial inferences of people, within our domain.  
 
 \section{Discussion}
 
-
+\ndg{discuss some stuff....}
 
 
 %%%%%%%%
