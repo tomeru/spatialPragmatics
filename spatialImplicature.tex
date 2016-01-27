@@ -171,13 +171,39 @@ Finally, the pragmatic listener, $L_1$, in Equation \ref{eqn:L1} updates her bel
 %
 %Listeners of depth 0 and 1 are \textit{literal} listener $L_0$ and \textit{pragmatic} listener $L_1$ as defined above. While higher combinations of listener and speaker depths are useful in games of social coordination (CITE), in many tasks the \textit{pragmatic} listener model is sufficient, and here we are interesting is seeing how well it models people's behavior in a spatial task above that of a \textit{literal} listener. 
 
-\subsubsection{Lexicon} The utterances are implemented as boolean functions that take in a state of the world (the x,y pair where an event occurred) and return $True$ or $False$. We considered three types of spatial utterances: ``In'' utterances (e.g. ``In the Red Quarter'') return $True$ if the event falls within the boundaries of a region and $False$ otherwise. ``Near-edge'' utterances (e.g. ``Near the edge of the Red Quarter'') return $True$ if the event is within a distance $d$ of the boundaries of a region and $False$ otherwise. ``Near'' utterances (e.g. ``Near the Red Quarter'') return $True$ if the event is near the edge of a region but not in it, as defined by the ``In'' and ``Near-edge'' utterances. People no doubt have access to many more spatial utterances and their combinations, but we restrict ourselves to this set for simplicity. 
+%\subsubsection{Lexicon} 
 
-\subsubsection{Parameter choice} The model as stated leaves open the question of what distance counts as ``Near'' or ``Near the edge'' in the shared lexicon (what $d$ to use), as well as what counts as ``approximately equal'' between the true state and the inferred state (what $\epsilon$ to use). We set both $d$ and $\epsilon$ at 10 units (pixels). A fuller treatment of ``Near'' will need to use a more region-size-dependent choice of $d$ (`near your coffee mug' is not the same as `near your coffee house'), but is not considered here. 
 
-*** NEED TO REWRITE THIS TO REFLECT THE NEW MODEL THAT INTEGRATES OVER NEAR DISTS. ALSO MENTION `SHARPENING PARAMETER'.
+We will assume that the spatial language relevant to our scenarios depends on a context set of regions in $\mathbb{R}^2$.
+The denotation of an utterance $u$ in a context $C$ is a function from position to Boolean: $\denote{u}^C(s)\in \text{Bool}$.
+%The utterances are implemented as boolean functions that take in a state of the world (the x,y pair where an event occurred) and return $True$ or $False$. 
+We considered three types of spatial utterances, each of which combines a preposition with a region name: 
+\begin{itemize}
+\item ``In'' utterances (e.g. ``In the Red Quarter'') are true within the region: $\denote{\text{``in R''}}(s) := s\in R$.
+\item ``Near-edge'' utterances (e.g. ``Near the edge of the Red Quarter'') are true within distance $d$ of a region boundary: $\denote{\text{``near edge R''}}(s) := \mu(s,\beta(R))<d$. (Where $\mu$ measure distance to a set, and $\beta$ returns the boundary of a region.)
+\item ``Near'' utterances (e.g. ``Near the Red Quarter'') are true near the edge but not inside: $\denote{\text{``near R''}}(s) := 
+\denote{\text{``near edge R''}}(s) \wedge \neg \denote{\text{``in R''}}(s)$.
+\end{itemize}
+People no doubt have access to many more spatial utterances and their combinations, but we restrict ourselves to this set for simplicity. 
 
-\subsubsection{Full model} We implement this model in the probabilistic programming language Church \cite{goodman2008}. A full implementation can be found at ****put on forest? or just on website****. We used this implementation to generate predictions for each spatial configuratuion (``city'') used in the experiment below, and for each utterance.
+
+% return $True$ if the event falls within the boundaries of a region and $False$ otherwise. ``Near-edge'' utterances (e.g. ``Near the edge of the Red Quarter'') return $True$ if the event is within a distance $d$ of the boundaries of a region and $False$ otherwise. ``Near'' utterances (e.g. ``Near the Red Quarter'') return $True$ if the event is near the edge of a region but not in it, as defined by the ``In'' and ``Near-edge'' utterances. 
+
+
+
+%\subsubsection{Parameter choice} 
+
+The model as stated leaves open the question of what distance counts as ``Near'' or ``Near the edge'' in the shared lexicon (what $d$ to use), as well as what counts as ``approximately equal'' between the true state and the inferred state (what $\epsilon$ to use). We set both $d$ and $\epsilon$ at 10 units (pixels). A fuller treatment of ``Near'' will need to use a more region-size-dependent choice of $d$ (`near your coffee mug' is not the same as `near your coffee house'), but is not considered here. 
+
+\ndg{NEED TO REWRITE THIS TO REFLECT THE NEW MODEL THAT INTEGRATES OVER NEAR DISTS. ALSO MENTION `SHARPENING PARAMETER'.}
+
+We replace Equation \ref{eqn:L0} with a version that has uncertainty about the tolerances for each ``near'' utterance:
+\begin{equation}
+P_{L_0}(s|u)\propto \delta_{\denote{u}_{\vec{d}}(s)} P(s) P(\vec{d})\label{eqn:L0tol},
+\end{equation}
+where $\vec{d}$ is a real number, the tolerance, for each utterance. We assume $P(\vec{d})$ is uniform over \ndg{some range}.
+
+We implement this model in the probabilistic programming language Church \cite{goodman2008}. A full implementation can be found at ****put on forest? or just on website****. We used this implementation to generate predictions for each spatial configuration (``city'') used in the experiment below, and for each utterance.
 
 
 \begin{figure*}[!t]
