@@ -24,7 +24,11 @@
 \usepackage{pslatex}
 \usepackage{apacite}
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[usenames, dvipsnames]{color}
+
+ \newcommand{\denote}[1]{\mbox{ $[\![ #1 ]\!]$}}
 
 \definecolor{Green}{RGB}{10,200,100}
 \newcommand{\ndg}[1]{\textcolor{Green}{[ndg: #1]}}
@@ -104,54 +108,77 @@ To preview our results ... MAYBE TOMER CAN FILL IN THE EXCITING RESULTS PREVIEW 
 
 \section{Modeling spatial implicature}\label{mod}
 
-We model spatial implicature using the rational speaker-listener model applied previously to domains such as scalar implicature and social reasoning \cite{ndg+ast:topics2013,ast+ndg:cogsys2013}. We consider a speaker and listener as in the sketch shown in Figure (**). Both speaker and listener have access to a shared lexicon that contains a mapping from possible utterances to predicates that return Boolean values over states of the world. For example, in our specific lexicon the utterance ``in Red Quarter'' maps to a predicate that takes in a location  and returns the value $True$ if that location falls within the boundaries of the Red Quarter rectangle, and $False$ otherwise. We expand on the lexicon details further down. 
+We model spatial language understanding within the Rational Speech Acts (RSA) framework of \citeA{frankgoodman2012,ndg+ast:topics2013}.
+This has previously been applied to domains such as object properties with terms such as quantifiers (e.g.~``some of the apples are red'' implying that a subset of the apples are red).
+We adopt this framework to spatial language by taking locations as the domain of interest and building a lexicon for describing spatial relations. 
+The RSA framework specifies a pragmatic listener reasoning about the intention of an informative speaker, who in turn reasons about a literal listener; the literal listener updates her beliefs by conditioning on the truth of the utterance.
+Altogether, writing the position of interest (e.g.~of the Golden Lily) as $s$ and the utterance (e.g.``in the red quarter'') as $u$:
+\begin{eqnarray}
+P_{L_1}(s|u)&\propto&P_{S_1}(u | s) P(s) \label{eqn:L1}\\
+P_{S_1}(u|s)&\propto&\sum_{s' \text{ s.t. } |s-s'|<\epsilon} P_{L_0}(s'|u) P(u)\label{eqn:S1}\\
+P_{L_0}(s|u)&\propto& \delta_{\denote{u}(s)} P(s)\label{eqn:L0}
+\end{eqnarray}
+\ndg{do we want to make the context (city) explicit in these eqns? the tolerances?}
+Beginning with the simplest listener model, $L_0$, Equation \ref{eqn:L0} specifies a listener who interprets the utterance via its truth-functional denotation, $\denote{u}$ described in more detail below, and simply restricts the prior distribution over locations to those where this denotation is true.
+The speaker, $S_1$, in Equation \ref{eqn:S1} aims for the literal listener to guess the correct location, balanced against the prior probability (i.e.~cost) of the utterance. \ndg{do we use cost here? if not remove from eqns.}
+However, because it is vanishingly unlikely for $L_0$ to guess exactly the right location, our speaker only cares if the location is within a small distance $\epsilon$; this corresponds to an \emph{approximate question under discussion} as used by \citeA{kao2014}.
+Finally, the pragmatic listener, $L_1$, in Equation \ref{eqn:L1} updates her beliefs in accord with Bayes' rule, under the assumption that the $S_1$ speaker would have chosen the utterance she heard.
 
-The listener attempts to infer the true state of where an event occurred in the world ($s$), by considering the utterance they heard from the speaker ($u$), and the listener's knowledge of the world and the speaker. We consider two possible listeners. The first is a \textit{literal} listener ($L_0$) who understands an utterance by strictly referring to its meaning in a lexicon, modulated by the prior probability of a state occurring:
 
-\begin{equation}
-P_{L_0}(s|u)\propto P(s|u(s)=True)P(u),
-\end{equation}
 
-A speaker faced with such a literal listener ($S_0$) will choose an utterance that will maximize the probability of the listener inferring the correct state $s$. In continuous spatial distributions an exact equality between the observed state $s$ and the listener's inferred state $s'$ cannot be expected, and it is only required that an approximate equality condition holds $s\approx s'$. In this paper we use $|s-s'|<\epsilon$, though other approximate equality conditions are possible. The speaker is then:
 
-(*** Not sure about the exact equation to put down here ***)
-\begin{equation}
-P_{S_0}(u|s)\propto ***
-\end{equation}
 
-The second possible listener is a \textit{pragmatic} listener ($L_1$), who takes into account the speaker's reasoning when choosing an utterance:
+%spatial implicature using the rational speaker-listener model applied previously to domains such as scalar implicature and social reasoning \cite{ndg+ast:topics2013,ast+ndg:cogsys2013}. We consider a speaker and listener as in the sketch shown in Figure (**). Both speaker and listener have access to a shared lexicon that contains a mapping from possible utterances to predicates that return Boolean values over states of the world. For example, in our specific lexicon the utterance ``in Red Quarter'' maps to a predicate that takes in a location  and returns the value $True$ if that location falls within the boundaries of the Red Quarter rectangle, and $False$ otherwise. We expand on the lexicon details further down. 
+%
+%The listener attempts to infer the true state of where an event occurred in the world ($s$), by considering the utterance they heard from the speaker ($u$), and the listener's knowledge of the world and the speaker. We consider two possible listeners. The first is a \textit{literal} listener ($L_0$) who understands an utterance by strictly referring to its meaning in a lexicon, modulated by the prior probability of a state occurring:
+%
+%\begin{equation}
+%P_{L_0}(s|u)\propto P(s|u(s)=True)P(u),
+%\end{equation}
+%
+%A speaker faced with such a literal listener ($S_0$) will choose an utterance that will maximize the probability of the listener inferring the correct state $s$. In continuous spatial distributions an exact equality between the observed state $s$ and the listener's inferred state $s'$ cannot be expected, and it is only required that an approximate equality condition holds $s\approx s'$. In this paper we use $|s-s'|<\epsilon$, though other approximate equality conditions are possible. The speaker is then:
+%
+%(*** Not sure about the exact equation to put down here ***)
+%\begin{equation}
+%P_{S_0}(u|s)\propto ***
+%\end{equation}
+%
+%The second possible listener is a \textit{pragmatic} listener ($L_1$), who takes into account the speaker's reasoning when choosing an utterance:
+%
+%\begin{equation}
+%P_{L_1}(s|u)\propto P_{S_0}(u|s)P(s)
+%\end{equation}
+%
+%Such recursive, probabilistic reasoning can be captured as a probabilistic program. We implemented the model in the Church language (cite, website?) along the following lines: \\
+%
+%\texttt{({\color{blue}{define}} (speaker state)}\\
+%\texttt{\tab ({\color{blue}{rejection-query}}}\\
+%\texttt{\tab  ({\color{blue}{define}} utterance (sample utterance-prior))}\\
+%\texttt{\tab   \color{BurntOrange};; Return utterance...}\\
+%\texttt{\tab   utterance}\\
+%\texttt{\tab   \color{BurntOrange};; Conditioned on...}\\
+%\texttt{\tab  (about-equal state (listener utterance 0))))}\\
+%\texttt{}\\
+%\texttt{({\color{blue}{define}} (listener utterance depth)}\\
+%\texttt{\tab ({\color{blue}{rejection-query}}}\\
+%\texttt{\tab  (define state (sample state-prior))}\\
+%\texttt{\tab   \color{BurntOrange};; Return state...}\\
+%\texttt{\tab  state}\\
+%\texttt{\tab   \color{BurntOrange};; Conditioned on...}\\
+%\texttt{\tab  ({\color{blue}{if}} (= depth 0)}\\
+%\texttt{\tab \tab \tab  (utterance state)}\\
+%\texttt{\tab \tab \tab  (equal? utterance (speaker state))))}\\
+%
+%Listeners of depth 0 and 1 are \textit{literal} listener $L_0$ and \textit{pragmatic} listener $L_1$ as defined above. While higher combinations of listener and speaker depths are useful in games of social coordination (CITE), in many tasks the \textit{pragmatic} listener model is sufficient, and here we are interesting is seeing how well it models people's behavior in a spatial task above that of a \textit{literal} listener. 
 
-\begin{equation}
-P_{L_1}(s|u)\propto P_{S_0}(u|s)P(s)
-\end{equation}
-
-Such recursive, probabilistic reasoning can be captured as a probabilistic program. We implemented the model in the Church language (cite, website?) along the following lines: \\
-
-\texttt{({\color{blue}{define}} (speaker state)}\\
-\texttt{\tab ({\color{blue}{rejection-query}}}\\
-\texttt{\tab  ({\color{blue}{define}} utterance (sample utterance-prior))}\\
-\texttt{\tab   \color{BurntOrange};; Return utterance...}\\
-\texttt{\tab   utterance}\\
-\texttt{\tab   \color{BurntOrange};; Conditioned on...}\\
-\texttt{\tab  (about-equal state (listener utterance 0))))}\\
-\texttt{}\\
-\texttt{({\color{blue}{define}} (listener utterance depth)}\\
-\texttt{\tab ({\color{blue}{rejection-query}}}\\
-\texttt{\tab  (define state (sample state-prior))}\\
-\texttt{\tab   \color{BurntOrange};; Return state...}\\
-\texttt{\tab  state}\\
-\texttt{\tab   \color{BurntOrange};; Conditioned on...}\\
-\texttt{\tab  ({\color{blue}{if}} (= depth 0)}\\
-\texttt{\tab \tab \tab  (utterance state)}\\
-\texttt{\tab \tab \tab  (equal? utterance (speaker state))))}\\
-
-Listeners of depth 0 and 1 are \textit{literal} listener $L_0$ and \textit{pragmatic} listener $L_1$ as defined above. While higher combinations of listener and speaker depths are useful in games of social coordination (CITE), in many tasks the \textit{pragmatic} listener model is sufficient, and here we are interesting is seeing how well it models people's behavior in a spatial task above that of a \textit{literal} listener. 
-
-\subsubsection{Utterance lexicon} The utterances are implemented as boolean functions that take in a state of the world (the x,y pair where an event occurred) and return $True$ or $False$. We considered three types of spatial utterances: ``In'' utterances (e.g. ``In the Red Quarter'') return $True$ if the event falls within the boundaries of a region and $False$ otherwise. ``Near-edge'' utterances (e.g. ``Near the edge of the Red Quarter'') return $True$ if the event is within a distance $d$ of the boundaries of a region and $False$ otherwise. ``Near'' utterances (e.g. ``Near the Red Quarter'') return $True$ if the event is near the edge of a region but not in it, as defined by the ``In'' and ``Near-edge'' utterances. People no doubt have access to many more spatial utterances and their combinations, but we restrict ourselves to this set for simplicity. 
+\subsubsection{Lexicon} The utterances are implemented as boolean functions that take in a state of the world (the x,y pair where an event occurred) and return $True$ or $False$. We considered three types of spatial utterances: ``In'' utterances (e.g. ``In the Red Quarter'') return $True$ if the event falls within the boundaries of a region and $False$ otherwise. ``Near-edge'' utterances (e.g. ``Near the edge of the Red Quarter'') return $True$ if the event is within a distance $d$ of the boundaries of a region and $False$ otherwise. ``Near'' utterances (e.g. ``Near the Red Quarter'') return $True$ if the event is near the edge of a region but not in it, as defined by the ``In'' and ``Near-edge'' utterances. People no doubt have access to many more spatial utterances and their combinations, but we restrict ourselves to this set for simplicity. 
 
 \subsubsection{Parameter choice} The model as stated leaves open the question of what distance counts as ``Near'' or ``Near the edge'' in the shared lexicon (what $d$ to use), as well as what counts as ``approximately equal'' between the true state and the inferred state (what $\epsilon$ to use). We set both $d$ and $\epsilon$ at 10 units (pixels). A fuller treatment of ``Near'' will need to use a more region-size-dependent choice of $d$ (`near your coffee mug' is not the same as `near your coffee house'), but is not considered here. 
 
 *** NEED TO REWRITE THIS TO REFLECT THE NEW MODEL THAT INTEGRATES OVER NEAR DISTS. ALSO MENTION `SHARPENING PARAMETER'.
+
+\subsubsection{Full model} We implement this model in the probabilistic programming language Church \cite{goodman2008}. A full implementation can be found at ****put on forest? or just on website****. We used this implementation to generate predictions for each spatial configuratuion (``city'') used in the experiment below, and for each utterance.
+
 
 \begin{figure*}[!t]
 \center
