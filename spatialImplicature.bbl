@@ -29,6 +29,57 @@ Carstensen, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Epanechnikov%
+}{%
+Epanechnikov%
+}{%
+{\protect \APACyear {1969}}%
+}]{%
+epanechnikov1969non}
+\APACinsertmetastar {%
+epanechnikov1969non}%
+\begin{APACrefauthors}%
+Epanechnikov, V\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1969}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Non-parametric estimation of a multivariate probability
+  density} {Non-parametric estimation of a multivariate probability
+  density}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Theory of Probability \& Its
+  Applications}{14}{1}{153--158}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Frank%
+\ \BBA {} Goodman%
+}{%
+Frank%
+\ \BBA {} Goodman%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+frank2012predicting}
+\APACinsertmetastar {%
+frank2012predicting}%
+\begin{APACrefauthors}%
+Frank, M\BPBI C.%
+\BCBT {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Predicting pragmatic reasoning in language games}
+  {Predicting pragmatic reasoning in language games}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Science}{336}{6084}{998--998}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Golland%
 , Liang%
 \BCBL {}\ \BBA {} Klein%
@@ -59,10 +110,41 @@ Golland, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Goodman%
+N.~Goodman%
+, Mansinghka%
+, Roy%
+, Bonawitz%
+\BCBL {}\ \BBA {} Tarlow%
+}{%
+N.~Goodman%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+goodman2012church}
+\APACinsertmetastar {%
+goodman2012church}%
+\begin{APACrefauthors}%
+Goodman, N.%
+, Mansinghka, V.%
+, Roy, D.%
+, Bonawitz, K.%
+\BCBL {}\ \BBA {} Tarlow, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Church: a language for generative models} {Church: a
+  language for generative models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1206.3255}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+N\BPBI D.~Goodman%
 \ \BBA {} Stuhlm\"{u}ller%
 }{%
-Goodman%
+N\BPBI D.~Goodman%
 \ \BBA {} Stuhlm\"{u}ller%
 }{%
 {\protect \APACyear {2013}}%
@@ -182,6 +264,36 @@ Horn, L.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Kao%
+, Wu%
+, Bergen%
+\BCBL {}\ \BBA {} Goodman%
+}{%
+Kao%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+kao2014}
+\APACinsertmetastar {%
+kao2014}%
+\begin{APACrefauthors}%
+Kao, J\BPBI T.%
+, Wu, J\BPBI Y.%
+, Bergen, L.%
+\BCBL {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Nonliteral understanding of number words} {Nonliteral
+  understanding of number words}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the National Academy of
+  Sciences}{111}{33}{12002--12007}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Landau%
 \ \BBA {} Jackendoff%
 }{%
@@ -206,61 +318,6 @@ Landau, B.%
   cognition?}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Behavioral and Brain Sciences}{16}{02}{255--265}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Levinson%
-}{%
-Levinson%
-}{%
-{\protect \APACyear {2000}}%
-}]{%
-levinson00}
-\APACinsertmetastar {%
-levinson00}%
-\begin{APACrefauthors}%
-Levinson, S\BPBI C.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2000}.
-\newblock
-\APACrefbtitle {Presumptive meanings: {T}he theory of generalized
-  conversational implicature} {Presumptive meanings: {T}he theory of
-  generalized conversational implicature}.
-\newblock
-\APACaddressPublisher{}{MIT Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Stuhlm\"{u}ller%
-\ \BBA {} Goodman%
-}{%
-Stuhlm\"{u}ller%
-\ \BBA {} Goodman%
-}{%
-{\protect \APACyear {2013}}%
-}]{%
-ast+ndg:cogsys2013}
-\APACinsertmetastar {%
-ast+ndg:cogsys2013}%
-\begin{APACrefauthors}%
-Stuhlm\"{u}ller, A.%
-\BCBT {}\ \BBA {} Goodman, N\BPBI D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2013}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Reasoning about Reasoning by Nested Conditioning:
-  Modeling Theory of Mind with Probabilistic Programs} {Reasoning about
-  reasoning by nested conditioning: Modeling theory of mind with probabilistic
-  programs}.{\BBCQ}
-\newblock
-
-\newblock
-\begin{APACrefDOI} \doi{http://dx.doi.org/10.1016/j.cogsys.2013.07.003}
-  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
