@@ -70,9 +70,9 @@ People use spatial languagePeople use spatial language
 Pragmatics, implicature, spatial language
 \end{abstract}
 
-\section{Introduction}
+\section{Introduction} 
 %Space is continuous and spatial relations between objects can be complex;
-Space is continuous, language is discrete, and spatial language is course and limited---built from a restricted and closed class of spatial prepositions \cite{talmy83,talmy00,landau93} such as ``in,'' ``on,'' and ``near.'' 
+Space is continuous, language is discrete, and spatial language is coarse and limited---built from a restricted and closed class of spatial prepositions \cite{talmy83,talmy00,landau93} such as ``in,'' ``on,'' and ``near.'' 
 How can we communicate accurately about spatial relations with an impoverished, discrete spatial vocabulary?
 %The spatial world is rich and complex, but our spatial vocabulary is often coarse and limited. 
 %English---like many other languages---has a restricted and closed class of spatial prepositions~\cite{talmy83,talmy00,landau93} such as ``in,'' ``on,'' and ``near.'' 
@@ -225,7 +225,7 @@ We constructed 4 simple city maps like the one shown Figure \ref{fig:illustratio
 \begin{figure*}[!t]
 \center
 \includegraphics[width=\textwidth]{figures/results1.pdf}
-\caption{Examples highlighting trends from Figures \ref{fig:In} and \ref{fig:Near}. The response to same utterance (column) changes by the different relative configuration of the regions.}
+\caption{Examples highlighting trends from Figures \ref{fig:In} and \ref{fig:Near}. The response to the same utterance (column) changes by the different relative configuration of the regions.}
 \label{fig:zoomIn}
 \end{figure*}
 
@@ -243,7 +243,7 @@ To show qualitative effects, we focus on the cases highlighted in Figure \ref{fi
 
 \paragraph{`In X' implies `In X but not in Y'} As shown for example in Figure \ref{fig:zoomIn}(a): When people hear `In Blue' in City 2 (bottom) they infer `In Blue, but not in the Plaza'. Both the top and bottom of (a) show participant guesses for the lily location when told it grew in the Blue Quarter. In the top figure (Blue Quarter without Plaza) people place most of their guesses in the center of the Quarter (a tic-tac-toe-like division of the Quarter shows that the grid center, accounting for 11\% of the area, captures 59\% of the guesses). In the bottom panel (Blue Quarter with Plaza), people avoid the same center (the grid center contains only 8\% of the guesses) while shifting to the right of the Plaza. Such a pattern of results holds for the other regions as well, as shown in Figure \ref{fig:In}. 
 
-\paragraph{Edge avoidance} When there is no direct intersection between regions (except with the City, which all regions intersect with), people do not guess uniformly in the region, but rather favor the center. For example, in Figure \ref{fig:zoomIn}(b), bottom: When people hear `In Red' they place most of their guesses in the center of the region. A grid-analysis shows the red-grid center accounts for 65\% of the guesses, as opposed to the 11\% expected by chance. Using 10,000 bootstrapped simulations of 49 participants sampling guesses from a uniform distribution on the Red Quarter shows that in \textit{none} of them does the center account for more than $\sim$30\% of the responses. Such a pattern of results holds for the other regions as well, as shown in Figure \ref{fig:In}. 
+\paragraph{Edge avoidance} When there is no direct intersection between regions (except the City, which all regions intersect with), people do not guess uniformly in the region, but rather favor the center. For example, in Figure \ref{fig:zoomIn}(b), bottom: People told `In Red' place most of their guesses in the center of the region. A grid-analysis shows the red-grid center accounts for 65\% of the guesses, compared with the 11\% expected by chance. Using 10,000 simulations of 49 participants sampling guesses from a uniform distribution on the Red Quarter shows that in \textit{none} of them does the center account for more than $\sim$30\% of the responses. Such a pattern of results holds for the other regions as well, as shown in Figure \ref{fig:In}. 
 
 \paragraph{`Near' is non uniform on edges} As shown in Figure \ref{fig:zoomIn}(c) and (d), when told `Near Plaza' or `Near Blue', people do not place a uniform probability on edges of regions, and where they guess depend on the context of other regions. In City 4 (top panel of (c)) people place their guesses for `Near Plaza' to the top-left of the Plaza (top-left quadrant of figure with respect to Plaza accounts for 51\% of the guesses, top-right 4\%, bottom-right 18\%, bottom-left 16\%. Remaining 11\% are in the Plaza). However, in City 1 (bottom panel of (c)) people places their guesses for `Near Plaza' to the top and to the right of the plaza (top-left quadrant 22\% of the guesses, top-right 41\%, bottom-right 20\%, bottom-left 2\%. Remaining 15\% are in the Plaza). %As for the Blue Quarter, 
 
@@ -265,16 +265,15 @@ In the next section, we turn to a quantitative analysis, comparing results with 
 
 \section{Comparison to Model(s)}
 
-In order to quantitatively compare people to the literal listener and pragmatic listener models ($L_0$ and $L_1$), we converted participants' responses for each condition into smooth two-dimensional distributions. We used non-parametric, multivariate kernel density estimation to infer these distributions \cite{epanechnikov1969non}. The same estimation procedure was applied to samples drawn from the probabilistic programs that represent the $L_0$ and $L_1$ models. The model distributions are `sharpened' by raising them to a power $\alpha$ and renormalizing. Such a sharpening parameter controls how much of the model's distribution is centered around the maximum likelihood, and is functionally similar to an `optimality' parameter used in other implicature studies \cite{ndg+ast:topics2013,kao2014}. We set $\alpha=1.5$, although the overall findings are robust within an explored range $\alpha \in [1,2]$. 
+In order to quantitatively compare people to the literal listener and pragmatic listener models ($L_0$ and $L_1$), we converted participants' responses for each condition into smooth two-dimensional distributions. We used non-parametric, multivariate kernel density estimation to infer these distributions \cite{epanechnikov1969non}. The same estimation was applied to samples drawn from the probabilistic programs that represent the $L_0$ and $L_1$ models. The model distributions are `sharpened' by raising them to a power $\alpha$ and renormalizing. Such a sharpening parameter controls how much of the model's distribution is centered around the maximum likelihood, and is functionally similar to an `optimality' parameter used in other implicature studies \cite{ndg+ast:topics2013,kao2014}. We set $\alpha=1.5$, although the overall findings are robust within an explored range $\alpha \in [1,2]$. 
 
 
 
 Example comparisons between the models and people are shown in Figure \ref{fig:modelExamples}. When hearing `In Red' in City 1 (left-most column) The literal listener $L_0$ places a uniform posterior distribution on the Red Quarter, while $L_1$ and people avoid Victory Plaza and lean to the right of the Red Quarter. This correspondence can be measured in terms of the Kullback–-Leibler ($KL$) distance between the distributions. In this particular example, $KL(\text{people} | L_0) = 0.43$, while $KL(\text{people} | L_1) = 0.25$. 
 
 
-
-As Figure \ref{fig:modelExamples} shows, the $L_1$ model captures many of the interesting implicature-like interpretations shown by people.
-Indeed, the $L_1$ listener shows the same general qualitative patterns discussed in the previous section (``in X'' implies ``in X but not Y'', edge avoidance, non-uniformity on edges). A full comparison figure would exceed the space limits of this paper, but can be found at \url{http://www.mit.edu/~tomeru/spatialPragmatics/allComparisons.pdf}. Figure \ref{fig:KL} shows the $KL$ distances for both listener models across all questions and cities. The pragmatic listener $L_1$ is closer to people than the literal listener for 26 of the 28 (93\%) possible comparisons. 
+As Figure \ref{fig:modelExamples} shows, the $L_1$ model captures many of the interesting spatial-implicature interpretations shown by people.
+Indeed, the $L_1$ listener shows the same general qualitative patterns discussed in the previous section (``in X'' implies ``in X but not Y'', edge avoidance, non-uniformity on edges). A full comparison figure exceeds the space limits of this paper, but can be found at \url{http://www.mit.edu/~tomeru/spatialPragmatics/allComparisons.pdf}. Figure \ref{fig:KL} shows the $KL$ distances for both models across all questions and cities. The pragmatic listener is closer to people than the literal listener for 26 of the 28 (93\%) comparisons. 
 
 While the pragmatic listener is able to account for the pattern of results found with people, it is interesting to highlight some particular cases where it does not do as well. The left column of Figure \ref{fig:modelProbs} shows one of the two cases where the $KL$ distance between people and the literal listener is shorter than between people and the pragmatic listener.  While the implicature pattern of the pragmatic listener seems generally correct -- it places its probability in the Red Quarter while avoiding the Plaza -- the model is over-avoiding the area near the plaza relative to people. The right column of Figure \ref{fig:modelProbs} shows an example where even though the pragmatic listener is closer to people than the literal listener, it seems generally mistaken in that it places much of its probability distribution within the Red Quarter, which people avoid. 
 
@@ -285,7 +284,7 @@ While the pragmatic listener is able to account for the pattern of results found
 \label{fig:modelProbs}
 \end{figure}
 
-Overall, the results suggest that the pragmatic listener model is able to account for the quantitative and qualitative pattern of pragmatic spatial inferences of people, within our domain.  
+Overall, the results suggest that the pragmatic listener model can account for the quantitative and qualitative pattern of pragmatic spatial inferences of people, within our domain.  
 
 \section{Discussion}
 
@@ -296,23 +295,19 @@ Overall, the results suggest that the pragmatic listener model is able to accoun
 \label{fig:KL}
 \end{figure}
 
-Space is fine grained, more so that language, leaving deal room for influence of context and pragmatic enrichment.
-Hence, spatial language presents a promising avenue for testing quantitative models of pragmatic reasoning.
-We investigated people's fine-grained pragmatic reasoning in a spatial domain, and found support for a model within the rational speech act (RSA) framework.  
+Space is fine grained, more so than language, leaving a great deal of room for the influence of context and pragmatic enrichment. As a result, spatial language is a promising avenue for testing quantitative models of pragmatic reasoning. We investigated people's fine-grained pragmatic reasoning in a spatial domain, and found support for a model within the rational speech act (RSA) framework.  
 
-The spatial lexicon of the model was restricted to ``in'', ``near'' and ``near-edge'' utterances. People's spatial language is no doubt far richer. Even within our domain utterances might include `in the middle of the Red Quarter', `in between the Red and Blue Quarters', `above Victory Plaza', and so on. People might also combine utterances (e.g. `to the left of the Blue Quarter, near the Plaza'). In future work, a parallel production task (in which people see where a flower grew and must convey it using language) should be used to inform and expand the lexicon. 
+The model's lexicon was restricted to ``in'', ``near'' and ``near-edge'' utterances. People's spatial language is no doubt far richer. Even within our domain utterances might include `in the middle of the Red Quarter', `in between the Red and Blue Quarters', `above Victory Plaza', and so on. People might also combine utterances (e.g. `to the left of the Blue Quarter, near the Plaza'). In future work, a parallel production task (in which people see where a flower grew and must convey it using language) should be used to inform and expand the lexicon. 
 
-Many other simple extensions of this paradigm suggest themselves. For instance, when reasoning pragmatically, people take into account the knowledge of their partner \cite{ndg+ast:topics2013}. Within a spatial context, a speaker might adjust the landmarks and utterances they use depending on the listener: `it happened next to Jacque's coffeehouse' for people in the know vs.~`it happened next to the Eiffel Tower' for out-of-towners. The listener could correspondingly adjust their inferences depending on what they believe the listener knows.
+Many other simple extensions of this paradigm suggest themselves. For instance, when reasoning pragmatically, people take into account the knowledge of their partner \cite{ndg+ast:topics2013}. Within a spatial context, a speaker might adjust the landmarks and utterances they use depending on the listener: `it happened next to Jacque's coffeehouse' for people in the know vs.~`it happened next to the Eiffel Tower' for out-of-towners. The listener could correspondingly adjust their inferences depending on what they believe the speaker knows.
 
 Within the model, one of the most important directions for exploration is the treatment of \emph{pragmatic slack} in expressions like ``near the Victory Plaza.'' We have modeled the tolerance of these lexical items as uncertain, allowing the literal listener to infer an appropriate value. Such a literal-slack model allows the slack to adjust in order to increase the probability of a speaker's utterance being true; it neglects other pressures that may be important, such as making the speaker's utterance \emph{informative}. 
 \ndg{for instance?}
 One possibility would be to \emph{lift} the slack variable into the pragmatic listener (as in \cite{lassiter2015}). While this model is straightforward to construct, future work will be needed to find cases which distinguish it from the model used here.
 
+\subsubsection{Acknowledgments}
 
-
-\section{Acknowledgments}
-
-This work was supported by ONR grant N00014-13-1-0788 and a James S. McDonnell Foundation Scholar Award to NDG and \ndg{other moneys? CBMM}.
+This work was supported by ONR grant N00014-13-1-0788 and a James S. McDonnell Foundation Scholar Award to NDG and the Center for Brains, Minds and Machines (CBMM), NSF STC award CCF-1231216. 
 
 %%%%%%%%
 
