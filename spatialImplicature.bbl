@@ -142,6 +142,34 @@ Goodman, N.%
 
 \bibitem [\protect \citeauthoryear {%
 N\BPBI D.~Goodman%
+\ \BBA {} Lassiter%
+}{%
+N\BPBI D.~Goodman%
+\ \BBA {} Lassiter%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+goodman2014probabilistic}
+\APACinsertmetastar {%
+goodman2014probabilistic}%
+\begin{APACrefauthors}%
+Goodman, N\BPBI D.%
+\BCBT {}\ \BBA {} Lassiter, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Probabilistic semantics and pragmatics: Uncertainty in
+  language and thought} {Probabilistic semantics and pragmatics: Uncertainty in
+  language and thought}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Handbook of Contemporary Semantic Theory.
+  Wiley-Blackwell}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+N\BPBI D.~Goodman%
 \ \BBA {} Stuhlm\"{u}ller%
 }{%
 N\BPBI D.~Goodman%

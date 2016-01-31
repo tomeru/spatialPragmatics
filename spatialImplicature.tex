@@ -37,7 +37,7 @@
 \newcommand{\ndg}[1]{\textcolor{Green}{[ndg: #1]}}
 \newcommand{\tdu}[1]{\textcolor{Red}{[tdu: #1]}}
 
-\title{[Cute title]: The Pragmatics of Spatial Language}
+\title{The Pragmatics of Spatial Language}
  
 %\author{{\large \bf Morton Ann Gernsbacher (MAG@Macc.Wisc.Edu)} \\
 %  Department of Psychology, 1202 W. Johnson Street \\
@@ -61,7 +61,7 @@
 \begin{abstract}
 
 How do people understand the pragmatics of spatial language? 
-We propose a rational-speech act model for spatial reasoning, and apply it to the terms `in' and `near'. We examine people's fine-grain spatial reasoning in this domain by having them locate where an event occurred. Our pragmatic listener model provides a quantitative and qualitative fit to people's inferneces. \textbf{Keywords:}
+We propose a rational-speech act model for spatial reasoning, and apply it to the terms `in' and `near'. We examine people's fine-grain spatial reasoning in this domain by having them locate where an event occurred, given an utterance. Our pragmatic listener model provides a quantitative and qualitative fit to people's inferneces. \textbf{Keywords:}
 Pragmatics, Implicature, Spatial Language
 
 \end{abstract}
@@ -197,14 +197,14 @@ We implement this model in the probabilistic programming language Church \cite{g
 
 \begin{figure*}[!t]
 \center
-\includegraphics[width=.79\textwidth]{figures/In.pdf}
+\includegraphics[width=.7\textwidth]{figures/In.pdf}
 \caption{Experiment results pooled across participants for `In' utterances. Each dot is a participant guess for where a Gold Lily grew, color coded by the region that `In' refers to (e.g. red dots are different responses to ``In the Red Square'').}
 \label{fig:In}
 \end{figure*}
 
 \begin{figure*}[!]
 \center
-\includegraphics[width=.79\textwidth]{figures/Near.pdf}
+\includegraphics[width=.7\textwidth]{figures/Near.pdf}
 \caption{Experiment results pooled across participants for `Near' utterances, details as in Fig. \ref{fig:In}. }
 \label{fig:Near}
 \end{figure*}
@@ -273,7 +273,14 @@ Indeed, the $L_1$ listener shows the same general qualitative patterns discussed
 
 While the pragmatic listener is able to account for the pattern of results found with people, it is interesting to highlight some particular cases where it does not do so well. The left column of Figure \ref{fig:modelProbs} shows one of the two cases where the $KL$ distance between people and the literal listener is shorter than between people and the pragmatic listener.  While the implicature pattern of the pragmatic listener seems generally correct -- it places its probability in the Red Quarter while avoiding the Plaza -- the model is over-avoiding the area near the plaza relative to people. The right column of Figure \ref{fig:modelProbs} shows an example where even though the pragmatic listener is closer to people than the literal listener, it seems generally mistaken in that it places much of its probability distribution within the Red Quarter, which people avoid. 
 
-\begin{figure}[!h]
+\begin{figure}[!tb]
+\center
+\includegraphics[width=0.45\textwidth]{figures/KL.pdf}
+\caption{KL distances between people and the listener models, by question and city. Hatched bars are literal listener $L_0$ and plain bars are  pragmatic listener $L_1$. Bar color indicates region. Lower bars indicate greater agreement with people.}
+\label{fig:KL}
+\end{figure}
+
+\begin{figure}[!tbh]
 \center
 \includegraphics[width=0.5\textwidth]{figures/Figure5.png}
 \caption{Mismatches between pragmatic listener and people, with literal listener for comparison. Details similar to Fig. \ref{fig:modelExamples}.}
@@ -281,32 +288,27 @@ While the pragmatic listener is able to account for the pattern of results found
 \end{figure}
 
 Overall, the results suggest that the pragmatic listener model can account for the quantitative and qualitative pattern of pragmatic spatial inferences of people, within our domain.  
-\vspace{-10pt}
+
 \section{Discussion}
 
-\begin{figure}[!b]
-\center
-\includegraphics[width=0.45\textwidth]{figures/KL.pdf}
-\caption{KL distances between people and the listener models, by question and city. Hatched bars are literal listener $L_0$ and plain bars are  pragmatic listener $L_1$. Bar color indicates region. Lower bars indicate greater agreement with people.}
-\label{fig:KL}
-\end{figure}
+
 
 Space is fine grained, more so than language, leaving a great deal of room for the influence of context and pragmatic enrichment. As a result, spatial language is a promising avenue for testing quantitative models of pragmatic reasoning. We investigated people's fine-grained pragmatic reasoning in a spatial domain, and found support for a model within the rational speech act (RSA) framework.  
 
-The model's lexicon was restricted to ``in'', ``near'' and ``near-edge''. People's spatial language is no doubt far richer. Even within our domain utterances might include `in the middle of the City', `in between the Red and Blue Quarters', `above Victory Plaza', and so on. People might also combine utterances (e.g. `to the left of the Blue Quarter, near the Plaza'). In future work, a parallel production task (in which people see where a flower grew and must convey it using language) should be used to inform and expand the lexicon. 
+The model's lexicon was more restricted than natural spatial language. Even within our domain, utterances might include `in the middle of the City', `in between the Red and Blue Quarters', `above Victory Plaza', `to the left of the Blue Quarter, near the Plaza'.... In future work, a parallel production task (in which people convey a map location using language) should be used to inform and expand the lexicon. 
 
 Many other simple extensions of this paradigm suggest themselves. For instance, when reasoning pragmatically, people take into account the knowledge of their partner \cite{ndg+ast:topics2013}. Within a spatial context, a speaker might adjust the landmarks and utterances they use depending on the listener: `it is next to Jacques' caf\'{e}' for those in the know vs.~`it is next to the Louvre' for out-of-towners. The listener could correspondingly adjust their inferences depending on what they believe the speaker knows.
 
 Within the model, one of the most important directions for exploration is the treatment of \emph{pragmatic slack} in expressions like ``near Victory Plaza.'' We modeled the tolerance of the lexical items as uncertain, allowing the literal listener to infer an appropriate value. Such a literal-slack model allows the slack to adjust in order to increase the probability of a speaker's utterance being true; it neglects other pressures that may be important, such as making the speaker's utterance \emph{informative}. 
-\ndg{for instance?}
+%\ndg{for instance?}
 One possibility is to \emph{lift} the slack variable into the pragmatic listener (as in \citeNP{goodman2014probabilistic}). While this model is straightforward to construct, future work is needed to find cases which distinguish it from the model used here.
 
 \subsubsection{Acknowledgments}
-
+\small
 This work was supported by ONR grant N00014-13-1-0788 and a James S. McDonnell Foundation Scholar Award to NDG and the Center for Brains, Minds and Machines (CBMM), NSF STC award CCF-1231216. 
 
 %%%%%%%%
-\vspace{-8pt}
+%\vspace{-8pt}
 \bibliographystyle{apacite}
 \setlength{\bibleftmargin}{.125in}
 \setlength{\bibindent}{-\bibleftmargin}
