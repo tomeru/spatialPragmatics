@@ -61,7 +61,7 @@
 \begin{abstract}
 
 How do people understand the pragmatics of spatial language? 
-We propose a rational-speech act model for spatial reasoning, and apply it to the terms `in' and `near'. We examine people's fine-grain spatial reasoning in this domain by having them locate where an event occurred, given an utterance. Our pragmatic listener model provides a quantitative and qualitative fit to people's inferneces. \textbf{Keywords:}
+We propose a rational-speech act model for spatial reasoning, and apply it to the terms `in' and `near'. We examine people's fine-grain spatial reasoning in this domain by having them locate where an event occurred, given an utterance. Our pragmatic listener model provides a quantitative and qualitative fit to people's inferences. \textbf{Keywords:}
 Pragmatics, Implicature, Spatial Language
 
 \end{abstract}
@@ -86,7 +86,6 @@ Suppose you were told that ``a gold lily grew in the red quarter.'' Where would 
 Taking ``in'' at face value (i.e.~the literal meaning) would mean uniform uncertainty over the red region.  
 But a pragmatic listener could arrive at a more specific interpretation: The speaker did not say the lily was in the plaza, nor near the plaza, nor on the edge of the red quarter.... From this a listener could infer that the lily was probably in none of these locations, and derive a much more specific guess as to where the lily was.
 In many ways this is a standard scalar implicature \cite{horn84}, such as ``some'' implying ``not all,'' but the interpretation space is much richer and the effect of context is easily manipulated---if the plaza were not inside the red quarter, or placed differently inside it, a pragmatic listener's interpretation should change.
-
 
 Because of the fine-grained space of interpretations, spatial language provides a particularly good domain to explore quantitative models of natural language pragmatics, such as the recently successful Rational Speech Acts (RSA) framework \cite{frank2012predicting,ndg+ast:topics2013}.
 Previous empirical work has discussed the role of pragmatics in spatial locative expressions~\cite{herskovits85,herskovits87}. 
@@ -177,7 +176,7 @@ We considered three types of spatial utterances, each of which combines a prepos
 \item ``Near'' utterances (e.g. ``Near the Red Quarter'') are true near the edge but not inside: $\denote{\text{``near R''}}(s) := 
 \denote{\text{``near edge R''}}(s) \wedge \neg \denote{\text{``in R''}}(s)$.
 \end{itemize}
-People no doubt have access to many more spatial utterances, and their combinations; we restrict ourselves to this set for simplicity. We set a uniform prior over the utterances, $P(u)$, and location, $P(s)$. 
+People no doubt have access to many more spatial utterances, and their combinations. We restrict ourselves to a small set of utterances for simplicity, and to these specific utterances because of their study in previous research \cite{herskovits85}, and because a separate production task (not reported) shows these are the common spatial terms. We set a uniform prior over the utterances, $P(u)$, and location, $P(s)$. 
 
 
 % return $True$ if the event falls within the boundaries of a region and $False$ otherwise. ``Near-edge'' utterances (e.g. ``Near the edge of the Red Quarter'') return $True$ if the event is within a distance $d$ of the boundaries of a region and $False$ otherwise. ``Near'' utterances (e.g. ``Near the Red Quarter'') return $True$ if the event is near the edge of a region but not in it, as defined by the ``In'' and ``Near-edge'' utterances. 
@@ -264,7 +263,7 @@ This qualitative pattern of results make it clear that context affects participa
 
 \section{Comparison to Model(s)}
 
-In order to quantitatively compare people to the literal and pragmatic listener models ($L_0$ and $L_1$), we converted participants' responses for each condition into smooth two-dimensional distributions. We used non-parametric, multivariate kernel density estimation to infer these distributions \cite{epanechnikov1969non}. The same estimation was applied to samples drawn from the probabilistic programs that represent the $L_0$ and $L_1$ models. The model distributions are `sharpened' by raising them to a power $\alpha$ and renormalizing. Such a sharpening parameter controls how much of the model's distribution is centered around the maximum likelihood, and is functionally similar to an `optimality' parameter used in other implicature studies \cite{ndg+ast:topics2013,kao2014}. We set $\alpha=1.5$, although the overall findings are robust within an explored range $\alpha \in [1,2]$. 
+In order to quantitatively compare people to the literal and pragmatic listener models ($L_0$ and $L_1$), we converted participants' responses for each condition into smooth two-dimensional distributions. We used non-parametric, multivariate kernel density estimation to infer these distributions \cite{epanechnikov1969non}. The same estimation was applied to samples drawn from the probabilistic programs that represent the $L_0$ and $L_1$ models. The model distributions are `sharpened' by raising them to a power $\alpha$ and renormalizing. Such a sharpening parameter controls how much of the model's distribution is smeared or centered around the maximum likelihood, and is functionally similar to an `optimality' parameter used in other implicature studies \cite{ndg+ast:topics2013,kao2014}. We set $\alpha=1.5$, although the overall findings are robust within an explored range $\alpha \in [1,2]$. 
 
 Example comparisons between the models and people are shown in Figure \ref{fig:modelExamples}. When hearing `In Red' in City 1 (left-most column) The literal listener $L_0$ places a uniform posterior distribution on the Red Quarter, while $L_1$ and people avoid Victory Plaza and lean to the right of the Red Quarter. This correspondence can be measured in terms of the Kullback–-Leibler ($KL$) distance between the distributions. In this particular example, $KL(\text{people} | L_0) = 0.43$, while $KL(\text{people} | L_1) = 0.25$. 
 
@@ -272,22 +271,25 @@ As Figure \ref{fig:modelExamples} shows, the $L_1$ model captures many of the in
 Indeed, the $L_1$ listener shows the same general qualitative patterns discussed in the previous section (``in X'' implies ``in X but not Y'', edge avoidance, non-uniformity on edges). A full comparison figure exceeds the space limits of this paper, but can be found at \url{http://www.mit.edu/~tomeru/spatialPragmatics/allComparisons.pdf}. Figure \ref{fig:KL} shows the $KL$ distances for both models across all questions and cities. The pragmatic listener is closer to people than the literal listener for 26 of the 28 (93\%) comparisons. 
 
 While the pragmatic listener is able to account for the pattern of results found with people, it is interesting to highlight some particular cases where it does not do so well. The left column of Figure \ref{fig:modelProbs} shows one of the two cases where the $KL$ distance between people and the literal listener is shorter than between people and the pragmatic listener.  While the implicature pattern of the pragmatic listener seems generally correct -- it places its probability in the Red Quarter while avoiding the Plaza -- the model is over-avoiding the area near the plaza relative to people. The right column of Figure \ref{fig:modelProbs} shows an example where even though the pragmatic listener is closer to people than the literal listener, it seems generally mistaken in that it places much of its probability distribution within the Red Quarter, which people avoid. 
+\\
+\\
+Overall, the results suggest that the pragmatic listener model can account for the quantitative and qualitative pattern of pragmatic spatial inferences of people, within our domain. 
 
-\begin{figure}[!tb]
+\begin{figure}[!t]
 \center
 \includegraphics[width=0.45\textwidth]{figures/KL.pdf}
 \caption{KL distances between people and the listener models, by question and city. Hatched bars are literal listener $L_0$ and plain bars are  pragmatic listener $L_1$. Bar color indicates region. Lower bars indicate greater agreement with people.}
 \label{fig:KL}
 \end{figure}
 
-\begin{figure}[!tbh]
+ 
+
+\begin{figure}[!b]
 \center
 \includegraphics[width=0.5\textwidth]{figures/Figure5.png}
 \caption{Mismatches between pragmatic listener and people, with literal listener for comparison. Details similar to Fig. \ref{fig:modelExamples}.}
 \label{fig:modelProbs}
 \end{figure}
-
-Overall, the results suggest that the pragmatic listener model can account for the quantitative and qualitative pattern of pragmatic spatial inferences of people, within our domain.  
 
 \section{Discussion}
 
